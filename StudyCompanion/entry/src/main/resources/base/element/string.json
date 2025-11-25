@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "internet_reason",
+      "value": "This app uses internet to connect to server."
+    },
+    {
+      "name": "read_media_reason",
+      "value": "This app reads media files for study resources."
+    },
+    {
+      "name": "write_media_reason",
+      "value": "This app writes media files for uploads."
+    }
+  ]
+}

@@ -43,6 +43,13 @@
             <version>${mybatis-plus.version}</version>
         </dependency>
 
+        <!-- 覆盖 mybatis-spring 版本，兼容 Spring 6.2 -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>3.0.4</version>
+        </dependency>
+
         <!-- Lombok（简化实体类，适配3.x） -->
         <dependency>
             <groupId>org.projectlombok</groupId>

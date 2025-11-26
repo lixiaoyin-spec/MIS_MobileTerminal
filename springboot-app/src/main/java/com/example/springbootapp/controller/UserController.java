@@ -1,6 +1,7 @@
 package com.example.springbootapp.controller;
 
 import com.example.springbootapp.service.UserService;
+import com.example.springbootapp.vo.LoginVO;
 import com.example.springbootapp.vo.TagVO;
 import com.example.springbootapp.vo.UserVO;
 import org.springframework.web.bind.annotation.*;
@@ -29,8 +30,8 @@ public class UserController {
 
     // 登录接口
     @PostMapping("/login")
-    public Map<String, Object> login(@Valid @RequestBody UserVO userVO) {
-        UserVO loginResult = userService.login(userVO);
+    public Map<String, Object> login(@Valid @RequestBody LoginVO loginVO) {
+        UserVO loginResult = userService.login(loginVO);
         Map<String, Object> result = new HashMap<>();
         result.put("code", 200);
         result.put("msg", "登录成功");

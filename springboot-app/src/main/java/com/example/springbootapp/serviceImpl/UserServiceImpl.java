@@ -3,7 +3,10 @@ package com.example.springbootapp.serviceImpl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.example.springbootapp.po.User;
 import com.example.springbootapp.repository.UserRepository;
+import com.example.springbootapp.security.TokenService;
+import com.example.springbootapp.security.TokenUser;
 import com.example.springbootapp.service.UserService;
+import com.example.springbootapp.vo.LoginVO;
 import com.example.springbootapp.vo.TagVO;
 import com.example.springbootapp.vo.UserVO;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -19,6 +22,8 @@ public class UserServiceImpl implements UserService {
 
     @Resource
     private UserRepository userRepository;
+    @Resource
+    private TokenService tokenService;
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     // 注册：存储标签到interest_tags字段
@@ -48,23 +53,28 @@ public class UserServiceImpl implements UserService {
 
     // 登录：返回token和用户信息
     @Override
-    public UserVO login(UserVO userVO) {
+    public UserVO login(LoginVO loginVO) {
         // 1. 查询用户
         User user = userRepository.selectOne(new LambdaQueryWrapper<User>()
-                .eq(User::getUsername, userVO.getUsername()));
+                .eq(User::getUsername, loginVO.getUsername()));
         Assert.notNull(user, "用户名或密码错误");
 
         // 2. 校验密码
-        boolean pwdMatch = passwordEncoder.matches(userVO.getPassword(), user.getPassword());
+        boolean pwdMatch = passwordEncoder.matches(loginVO.getPassword(), user.getPassword());
         Assert.isTrue(pwdMatch, "用户名或密码错误");
 
         // 3. 生成token（格式：TOKEN_uuid_userId）
         String token = "TOKEN_" + UUID.randomUUID() + "_" + user.getId();
+        tokenService.storeToken(token, new TokenUser(user.getId(), user.getUsername(), user.getRole()));
 
         // 4. PO转VO返回
         UserVO result = new UserVO();
         result.setId(user.getId());
+        result.setUsername(user.getUsername());
         result.setNickname(user.getNickname());
+        result.setMajor(user.getMajor());
+        result.setGrade(user.getGrade());
+        result.setInterestTags(user.getInterestTags());
         result.setRole(user.getRole());
         result.setToken(token);
         return result;

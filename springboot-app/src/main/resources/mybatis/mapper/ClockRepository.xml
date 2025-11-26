@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootapp.repository.ClockRepository">
+
+    <select id="selectByUserIdAndDate" resultType="com.example.springbootapp.po.Clock">
+        SELECT id,
+               user_id,
+               content,
+               clock_date,
+               create_time
+        FROM clock
+        WHERE user_id = #{userId}
+          AND clock_date = #{clockDate}
+        LIMIT 1
+    </select>
+
+    <select id="selectByUserId" resultType="com.example.springbootapp.po.Clock">
+        SELECT id,
+               user_id,
+               content,
+               clock_date,
+               create_time
+        FROM clock
+        WHERE user_id = #{userId}
+        ORDER BY clock_date DESC
+    </select>
+
+</mapper>
+

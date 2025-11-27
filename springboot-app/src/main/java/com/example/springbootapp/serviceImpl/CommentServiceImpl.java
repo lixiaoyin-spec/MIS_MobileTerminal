@@ -13,6 +13,8 @@ import org.springframework.util.Assert;
 
 import jakarta.annotation.Resource;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CommentServiceImpl implements CommentService {
@@ -47,5 +49,32 @@ public class CommentServiceImpl implements CommentService {
         comment.setContent(commentVO.getContent());
         comment.setCreateTime(LocalDateTime.now());
         commentRepository.insert(comment);
+    }
+
+    @Override
+    public List<CommentVO> getCommentsByPostId(Long postId) {
+        // 1. 校验帖子是否存在
+        Post post = postRepository.selectById(postId);
+        Assert.notNull(post, "帖子不存在或已删除");
+
+        // 2. 查询该帖子下的所有评论
+        List<Comment> comments = commentRepository.selectByPostId(postId);
+
+        // 3. PO转VO，关联用户表获取昵称
+        return comments.stream().map(comment -> {
+            CommentVO vo = new CommentVO();
+            vo.setId(comment.getId());
+            vo.setPostId(comment.getPostId());
+            vo.setContent(comment.getContent());
+            vo.setCreateTime(comment.getCreateTime());
+
+            // 查询评论人信息获取昵称
+            User user = userRepository.selectById(comment.getUserId());
+            if (user != null) {
+                vo.setNickname(user.getNickname());
+            }
+
+            return vo;
+        }).collect(Collectors.toList());
     }
 }

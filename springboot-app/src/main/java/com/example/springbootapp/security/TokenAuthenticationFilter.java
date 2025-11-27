@@ -28,6 +28,12 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
+        // 预检请求（OPTIONS）直接放行，避免跨域时被误拦截
+        if ("OPTIONS".equalsIgnoreCase(request.getMethod())) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+
         String token = resolveToken(request);
         if (StringUtils.hasText(token) && SecurityContextHolder.getContext().getAuthentication() == null) {
             tokenService.getUserByToken(token).ifPresent(tokenUser -> {

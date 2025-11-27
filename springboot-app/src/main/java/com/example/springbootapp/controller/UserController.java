@@ -21,6 +21,7 @@ public class UserController {
     // 注册接口（含标签提交）
     @PostMapping("/register")
     public Map<String, Object> register(@Valid @RequestBody UserVO userVO) {
+        System.out.println("开始访问");
         userService.register(userVO);
         Map<String, Object> result = new HashMap<>();
         result.put("code", 200);

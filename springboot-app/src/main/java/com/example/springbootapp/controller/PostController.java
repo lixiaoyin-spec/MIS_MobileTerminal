@@ -1,6 +1,7 @@
 package com.example.springbootapp.controller;
 
 import com.example.springbootapp.service.PostService;
+import com.example.springbootapp.vo.PostDetailVO;
 import com.example.springbootapp.vo.PostVO;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,6 +37,18 @@ public class PostController {
         result.put("code", 200);
         result.put("msg", "查询成功");
         result.put("data", postList);
+        return result;
+    }
+
+    // 帖子详情接口（包含帖子信息和评论列表）
+    @GetMapping("/detail")
+    public Map<String, Object> getDetail(
+            @RequestParam("postId") Long postId) {
+        PostDetailVO postDetail = postService.getPostDetail(postId);
+        Map<String, Object> result = new HashMap<>();
+        result.put("code", 200);
+        result.put("msg", "查询成功");
+        result.put("data", postDetail);
         return result;
     }
 }

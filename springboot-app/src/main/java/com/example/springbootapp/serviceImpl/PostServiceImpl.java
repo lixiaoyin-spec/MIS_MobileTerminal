@@ -5,7 +5,10 @@ import com.example.springbootapp.po.Post;
 import com.example.springbootapp.po.User;
 import com.example.springbootapp.repository.PostRepository;
 import com.example.springbootapp.repository.UserRepository;
+import com.example.springbootapp.service.CommentService;
 import com.example.springbootapp.service.PostService;
+import com.example.springbootapp.vo.CommentVO;
+import com.example.springbootapp.vo.PostDetailVO;
 import com.example.springbootapp.vo.PostVO;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -22,6 +25,8 @@ public class PostServiceImpl implements PostService {
     private PostRepository postRepository;
     @Resource
     private UserRepository userRepository;
+    @Resource
+    private CommentService commentService;
 
     @Override
     public void createPost(PostVO postVO) {
@@ -65,5 +70,32 @@ public class PostServiceImpl implements PostService {
             postVO.setNickname(user != null ? user.getNickname() : "匿名用户");
             return postVO;
         }).collect(Collectors.toList());
+    }
+
+    @Override
+    public PostDetailVO getPostDetail(Long postId) {
+        // 1. 查询帖子信息
+        Post post = postRepository.selectById(postId);
+        Assert.notNull(post, "帖子不存在或已删除");
+
+        // 2. 查询发帖人信息
+        User user = userRepository.selectById(post.getUserId());
+        Assert.notNull(user, "发帖人不存在");
+
+        // 3. 查询该帖子下的所有评论
+        List<CommentVO> comments = commentService.getCommentsByPostId(postId);
+
+        // 4. 组装PostDetailVO
+        PostDetailVO detailVO = new PostDetailVO();
+        detailVO.setId(post.getId());
+        detailVO.setTitle(post.getTitle());
+        detailVO.setContent(post.getContent());
+        detailVO.setNickname(user.getNickname());
+        detailVO.setViewCount(post.getViewCount());
+        detailVO.setCreateTime(post.getCreateTime());
+        detailVO.setUpdateTime(post.getUpdateTime());
+        detailVO.setComments(comments);
+
+        return detailVO;
     }
 }

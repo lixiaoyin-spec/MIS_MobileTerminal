@@ -33,6 +33,15 @@ service.interceptors.response.use(
     }
   },
   (error) => {
+    // Handle unauthorized/forbidden errors
+    if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+      const userStore = useUserStore()
+      userStore.logout()
+      // Force redirect to login
+      window.location.href = '/login'
+      return Promise.reject(error)
+    }
+    
     ElMessage.error(error.response?.data?.msg || error.message || 'Request failed')
     return Promise.reject(error)
   }

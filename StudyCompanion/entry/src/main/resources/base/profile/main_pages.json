@@ -1,5 +1,13 @@
 {
   "src": [
-    "pages/Index"
+    "pages/LoginPage",
+    "pages/Register",
+    "pages/Home",
+    "pages/CreatePostPage",
+    "pages/ForumPage",
+    "pages/PostDetailPage",
+    "pages/ClockInPage",
+    "pages/ResourceUploadPage",
+    "pages/RecommendPage"
   ]
 }

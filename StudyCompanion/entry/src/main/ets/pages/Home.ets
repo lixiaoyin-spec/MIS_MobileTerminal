@@ -43,9 +43,9 @@ struct HomePage {
     Button() {
       Text(label)
     }
-    .width("25%")
+    .width("20%") // 调整宽度以容纳5个按钮
     .height(50)
-    .fontSize(18)
+    .fontSize(16) // 调整字体大小
     .backgroundColor(Color.Transparent)
     .onClick(() => {
       router.pushUrl({ url: `pages/${page}` });
@@ -95,6 +95,7 @@ struct HomePage {
       Row() {
         this.NavButton("论坛", "ForumPage")
         this.NavButton("学伴推荐", "RecommendPage")
+        this.NavButton("AI助手", "AiChatPage") // 新增AI助手入口
         this.NavButton("打卡", "ClockInPage")
         this.NavButton("资源上传", "ResourceUploadPage")
       }

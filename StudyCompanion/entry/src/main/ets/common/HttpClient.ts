@@ -2,7 +2,7 @@ import http from '@ohos.net.http';
 import fs from '@ohos.file.fs';
 
 export class HttpClient {
-  private static BASE_URL = "http://10.6.2.184:8081";
+  private static BASE_URL = "http://10.4.113.10:8081";
 
   /** POST（自动加入 Bearer token） */
   static async postJson<T>(path: string, data: object, token?: string): Promise<T> {

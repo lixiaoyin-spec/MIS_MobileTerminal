@@ -8,6 +8,7 @@
     "pages/PostDetailPage",
     "pages/ClockInPage",
     "pages/ResourceUploadPage",
-    "pages/RecommendPage"
+    "pages/RecommendPage",
+    "pages/AiChatPage"
   ]
 }

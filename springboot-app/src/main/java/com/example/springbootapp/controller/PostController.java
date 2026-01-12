@@ -40,6 +40,29 @@ public class PostController {
         return result;
     }
 
+    // 按标题模糊搜索帖子
+    @GetMapping("/search")
+    public Map<String, Object> searchByTitle(@RequestParam("title") String title) {
+        List<PostVO> postList = postService.searchPostsByTitle(title);
+        Map<String, Object> result = new HashMap<>();
+        result.put("code", 200);
+        result.put("msg", "查询成功");
+        result.put("data", postList);
+        return result;
+    }
+
+    // 按浏览量排序帖子（order: asc/desc，默认为desc）
+    @GetMapping("/listByView")
+    public Map<String, Object> getListByView(
+            @RequestParam(value = "order", defaultValue = "desc") String order) {
+        List<PostVO> postList = postService.getPostListByViewCount(order);
+        Map<String, Object> result = new HashMap<>();
+        result.put("code", 200);
+        result.put("msg", "查询成功");
+        result.put("data", postList);
+        return result;
+    }
+
     // 帖子详情接口（包含帖子信息和评论列表）
     @GetMapping("/detail")
     public Map<String, Object> getDetail(

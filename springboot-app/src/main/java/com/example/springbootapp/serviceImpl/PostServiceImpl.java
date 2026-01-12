@@ -59,17 +59,36 @@ public class PostServiceImpl implements PostService {
         List<Post> postList = postRepository.selectList(queryWrapper);
 
         // 2. PO转VO（补充发帖人昵称）
-        return postList.stream().map(post -> {
-            PostVO postVO = new PostVO();
-            postVO.setId(post.getId());
-            postVO.setTitle(post.getTitle());
-            postVO.setContent(post.getContent());
-            postVO.setCreateTime(post.getCreateTime());
-            // 查询发帖人昵称
-            User user = userRepository.selectById(post.getUserId());
-            postVO.setNickname(user != null ? user.getNickname() : "匿名用户");
-            return postVO;
-        }).collect(Collectors.toList());
+        return convertToPostVOList(postList);
+    }
+
+    @Override
+    public List<PostVO> searchPostsByTitle(String title) {
+        Assert.hasText(title, "标题不能为空");
+
+        LambdaQueryWrapper<Post> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.like(Post::getTitle, title);
+        queryWrapper.orderByDesc(Post::getCreateTime);
+        List<Post> postList = postRepository.selectList(queryWrapper);
+
+        return convertToPostVOList(postList);
+    }
+
+    @Override
+    public List<PostVO> getPostListByViewCount(String order) {
+        boolean asc = "asc".equalsIgnoreCase(order);
+
+        LambdaQueryWrapper<Post> queryWrapper = new LambdaQueryWrapper<>();
+        if (asc) {
+            queryWrapper.orderByAsc(Post::getViewCount);
+        } else {
+            queryWrapper.orderByDesc(Post::getViewCount);
+        }
+        // 次排序保持最新优先
+        queryWrapper.orderByDesc(Post::getCreateTime);
+
+        List<Post> postList = postRepository.selectList(queryWrapper);
+        return convertToPostVOList(postList);
     }
 
     @Override
@@ -97,5 +116,21 @@ public class PostServiceImpl implements PostService {
         detailVO.setComments(comments);
 
         return detailVO;
+    }
+
+    /**
+     * 公共PO转VO封装，补充发帖人昵称
+     */
+    private List<PostVO> convertToPostVOList(List<Post> postList) {
+        return postList.stream().map(post -> {
+            PostVO postVO = new PostVO();
+            postVO.setId(post.getId());
+            postVO.setTitle(post.getTitle());
+            postVO.setContent(post.getContent());
+            postVO.setCreateTime(post.getCreateTime());
+            User user = userRepository.selectById(post.getUserId());
+            postVO.setNickname(user != null ? user.getNickname() : "匿名用户");
+            return postVO;
+        }).collect(Collectors.toList());
     }
 }

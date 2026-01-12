@@ -1,0 +1,470 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.2
+2 info using node@v20.19.0
+3 silly config load:file:C:\Users\34565\AppData\Roaming\nvm\v20.19.0\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\.npmrc
+5 silly config load:file:C:\Users\34565\.npmrc
+6 silly config load:file:C:\Program Files\nodejs\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\.npm-cache\_logs\2026-01-12T09_18_04_334Z-
+10 verbose logfile C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\.npm-cache\_logs\2026-01-12T09_18_04_334Z-debug-0.log
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+15 silly reify moves {}
+16 silly audit bulk request {
+16 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+16 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+16 silly audit   '@babel/parser': [ '7.28.5' ],
+16 silly audit   '@babel/types': [ '7.28.5' ],
+16 silly audit   '@ctrl/tinycolor': [ '3.6.1' ],
+16 silly audit   '@element-plus/icons-vue': [ '2.3.2' ],
+16 silly audit   '@esbuild/aix-ppc64': [ '0.25.12' ],
+16 silly audit   '@esbuild/android-arm': [ '0.25.12' ],
+16 silly audit   '@esbuild/android-arm64': [ '0.25.12' ],
+16 silly audit   '@esbuild/android-x64': [ '0.25.12' ],
+16 silly audit   '@esbuild/darwin-arm64': [ '0.25.12' ],
+16 silly audit   '@esbuild/darwin-x64': [ '0.25.12' ],
+16 silly audit   '@esbuild/freebsd-arm64': [ '0.25.12' ],
+16 silly audit   '@esbuild/freebsd-x64': [ '0.25.12' ],
+16 silly audit   '@esbuild/linux-arm': [ '0.25.12' ],
+16 silly audit   '@esbuild/linux-arm64': [ '0.25.12' ],
+16 silly audit   '@esbuild/linux-ia32': [ '0.25.12' ],
+16 silly audit   '@esbuild/linux-loong64': [ '0.25.12' ],
+16 silly audit   '@esbuild/linux-mips64el': [ '0.25.12' ],
+16 silly audit   '@esbuild/linux-ppc64': [ '0.25.12' ],
+16 silly audit   '@esbuild/linux-riscv64': [ '0.25.12' ],
+16 silly audit   '@esbuild/linux-s390x': [ '0.25.12' ],
+16 silly audit   '@esbuild/linux-x64': [ '0.25.12' ],
+16 silly audit   '@esbuild/netbsd-arm64': [ '0.25.12' ],
+16 silly audit   '@esbuild/netbsd-x64': [ '0.25.12' ],
+16 silly audit   '@esbuild/openbsd-arm64': [ '0.25.12' ],
+16 silly audit   '@esbuild/openbsd-x64': [ '0.25.12' ],
+16 silly audit   '@esbuild/openharmony-arm64': [ '0.25.12' ],
+16 silly audit   '@esbuild/sunos-x64': [ '0.25.12' ],
+16 silly audit   '@esbuild/win32-arm64': [ '0.25.12' ],
+16 silly audit   '@esbuild/win32-ia32': [ '0.25.12' ],
+16 silly audit   '@esbuild/win32-x64': [ '0.25.12' ],
+16 silly audit   '@floating-ui/core': [ '1.7.3' ],
+16 silly audit   '@floating-ui/dom': [ '1.7.4' ],
+16 silly audit   '@floating-ui/utils': [ '0.2.10' ],
+16 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+16 silly audit   '@parcel/watcher': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-android-arm64': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-darwin-arm64': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-darwin-x64': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-freebsd-x64': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-linux-arm-glibc': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-linux-arm-musl': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-linux-arm64-glibc': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-linux-arm64-musl': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-linux-x64-glibc': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-linux-x64-musl': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-win32-arm64': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-win32-ia32': [ '2.5.1' ],
+16 silly audit   '@parcel/watcher-win32-x64': [ '2.5.1' ],
+16 silly audit   '@sxzz/popperjs-es': [ '2.11.7' ],
+16 silly audit   '@rollup/rollup-android-arm-eabi': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-android-arm64': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-darwin-arm64': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-darwin-x64': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-freebsd-arm64': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-freebsd-x64': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-linux-arm-gnueabihf': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-linux-arm-musleabihf': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-linux-arm64-gnu': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-linux-arm64-musl': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-linux-loong64-gnu': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-linux-ppc64-gnu': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-linux-riscv64-gnu': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-linux-riscv64-musl': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-linux-s390x-gnu': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-linux-x64-gnu': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-linux-x64-musl': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-openharmony-arm64': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-win32-arm64-msvc': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-win32-ia32-msvc': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-win32-x64-gnu': [ '4.53.3' ],
+16 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.53.3' ],
+16 silly audit   '@types/estree': [ '1.0.8' ],
+16 silly audit   '@types/lodash': [ '4.17.21' ],
+16 silly audit   '@types/lodash-es': [ '4.17.12' ],
+16 silly audit   '@types/web-bluetooth': [ '0.0.16' ],
+16 silly audit   '@vitejs/plugin-vue': [ '5.2.4' ],
+16 silly audit   '@vue/compiler-core': [ '3.5.25' ],
+16 silly audit   '@vue/compiler-dom': [ '3.5.25' ],
+16 silly audit   '@vue/compiler-sfc': [ '3.5.25' ],
+16 silly audit   '@vue/compiler-ssr': [ '3.5.25' ],
+16 silly audit   '@vue/devtools-api': [ '6.6.4' ],
+16 silly audit   '@vue/reactivity': [ '3.5.25' ],
+16 silly audit   '@vue/runtime-core': [ '3.5.25' ],
+16 silly audit   '@vue/runtime-dom': [ '3.5.25' ],
+16 silly audit   '@vue/server-renderer': [ '3.5.25' ],
+16 silly audit   '@vue/shared': [ '3.5.25' ],
+16 silly audit   '@vueuse/core': [ '9.13.0' ],
+16 silly audit   '@vueuse/metadata': [ '9.13.0' ],
+16 silly audit   '@vueuse/shared': [ '9.13.0' ],
+16 silly audit   'async-validator': [ '4.2.5' ],
+16 silly audit   asynckit: [ '0.4.0' ],
+16 silly audit   axios: [ '1.13.2' ],
+16 silly audit   braces: [ '3.0.3' ],
+16 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+16 silly audit   chokidar: [ '4.0.3' ],
+16 silly audit   'combined-stream': [ '1.0.8' ],
+16 silly audit   csstype: [ '3.2.3' ],
+16 silly audit   dayjs: [ '1.11.19' ],
+16 silly audit   'delayed-stream': [ '1.0.0' ],
+16 silly audit   'detect-libc': [ '1.0.3' ],
+16 silly audit   'dunder-proto': [ '1.0.1' ],
+16 silly audit   'element-plus': [ '2.11.8' ],
+16 silly audit   entities: [ '4.5.0' ],
+16 silly audit   'es-define-property': [ '1.0.1' ],
+16 silly audit   'es-errors': [ '1.3.0' ],
+16 silly audit   'es-object-atoms': [ '1.1.1' ],
+16 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+16 silly audit   esbuild: [ '0.25.12' ],
+16 silly audit   'estree-walker': [ '2.0.2' ],
+16 silly audit   'fill-range': [ '7.1.1' ],
+16 silly audit   'follow-redirects': [ '1.15.11' ],
+16 silly audit   'form-data': [ '4.0.5' ],
+16 silly audit   fsevents: [ '2.3.3' ],
+16 silly audit   'function-bind': [ '1.1.2' ],
+16 silly audit   'get-intrinsic': [ '1.3.0' ],
+16 silly audit   'get-proto': [ '1.0.1' ],
+16 silly audit   gopd: [ '1.2.0' ],
+16 silly audit   'has-symbols': [ '1.1.0' ],
+16 silly audit   'has-tostringtag': [ '1.0.2' ],
+16 silly audit   hasown: [ '2.0.2' ],
+16 silly audit   immutable: [ '5.1.4' ],
+16 silly audit   'is-extglob': [ '2.1.1' ],
+16 silly audit   'is-glob': [ '4.0.3' ],
+16 silly audit   'is-number': [ '7.0.0' ],
+16 silly audit   lodash: [ '4.17.21' ],
+16 silly audit   'lodash-es': [ '4.17.21' ],
+16 silly audit   'lodash-unified': [ '1.0.3' ],
+16 silly audit   'magic-string': [ '0.30.21' ],
+16 silly audit   'math-intrinsics': [ '1.1.0' ],
+16 silly audit   'memoize-one': [ '6.0.0' ],
+16 silly audit   micromatch: [ '4.0.8' ],
+16 silly audit   'mime-db': [ '1.52.0' ],
+16 silly audit   'mime-types': [ '2.1.35' ],
+16 silly audit   nanoid: [ '3.3.11' ],
+16 silly audit   'node-addon-api': [ '7.1.1' ],
+16 silly audit   'normalize-wheel-es': [ '1.2.0' ],
+16 silly audit   picocolors: [ '1.1.1' ],
+16 silly audit   picomatch: [ '2.3.1', '4.0.3' ],
+16 silly audit   pinia: [ '2.3.1' ],
+16 silly audit   postcss: [ '8.5.6' ],
+16 silly audit   'proxy-from-env': [ '1.1.0' ],
+16 silly audit   readdirp: [ '4.1.2' ],
+16 silly audit   rollup: [ '4.53.3' ],
+16 silly audit   sass: [ '1.94.2' ],
+16 silly audit   'source-map-js': [ '1.2.1' ],
+16 silly audit   tinyglobby: [ '0.2.15' ],
+16 silly audit   fdir: [ '6.5.0' ],
+16 silly audit   'to-regex-range': [ '5.0.1' ],
+16 silly audit   vite: [ '6.4.1' ],
+16 silly audit   vue: [ '3.5.25' ],
+16 silly audit   'vue-demi': [ '0.14.10' ],
+16 silly audit   'vue-router': [ '4.6.3' ]
+16 silly audit }
+17 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\fsevents
+18 silly reify mark deleted [
+18 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\fsevents'
+18 silly reify ]
+19 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-win32-ia32-msvc
+20 silly reify mark deleted [
+20 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-win32-ia32-msvc'
+20 silly reify ]
+21 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-win32-arm64-msvc
+22 silly reify mark deleted [
+22 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-win32-arm64-msvc'
+22 silly reify ]
+23 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-openharmony-arm64
+24 silly reify mark deleted [
+24 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-openharmony-arm64'
+24 silly reify ]
+25 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-x64-musl
+26 silly reify mark deleted [
+26 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-x64-musl'
+26 silly reify ]
+27 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-x64-gnu
+28 silly reify mark deleted [
+28 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-x64-gnu'
+28 silly reify ]
+29 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-s390x-gnu
+30 silly reify mark deleted [
+30 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-s390x-gnu'
+30 silly reify ]
+31 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-riscv64-musl
+32 silly reify mark deleted [
+32 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-riscv64-musl'
+32 silly reify ]
+33 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-riscv64-gnu
+34 silly reify mark deleted [
+34 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-riscv64-gnu'
+34 silly reify ]
+35 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-ppc64-gnu
+36 silly reify mark deleted [
+36 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-ppc64-gnu'
+36 silly reify ]
+37 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-loong64-gnu
+38 silly reify mark deleted [
+38 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-loong64-gnu'
+38 silly reify ]
+39 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-arm64-musl
+40 silly reify mark deleted [
+40 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-arm64-musl'
+40 silly reify ]
+41 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-arm64-gnu
+42 silly reify mark deleted [
+42 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-arm64-gnu'
+42 silly reify ]
+43 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-arm-musleabihf
+44 silly reify mark deleted [
+44 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-arm-musleabihf'
+44 silly reify ]
+45 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-arm-gnueabihf
+46 silly reify mark deleted [
+46 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-arm-gnueabihf'
+46 silly reify ]
+47 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-freebsd-x64
+48 silly reify mark deleted [
+48 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-freebsd-x64'
+48 silly reify ]
+49 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-freebsd-arm64
+50 silly reify mark deleted [
+50 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-freebsd-arm64'
+50 silly reify ]
+51 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-darwin-x64
+52 silly reify mark deleted [
+52 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-darwin-x64'
+52 silly reify ]
+53 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-darwin-arm64
+54 silly reify mark deleted [
+54 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-darwin-arm64'
+54 silly reify ]
+55 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-android-arm64
+56 silly reify mark deleted [
+56 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-android-arm64'
+56 silly reify ]
+57 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-android-arm-eabi
+58 silly reify mark deleted [
+58 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-android-arm-eabi'
+58 silly reify ]
+59 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-win32-ia32
+60 silly reify mark deleted [
+60 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-win32-ia32'
+60 silly reify ]
+61 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-win32-arm64
+62 silly reify mark deleted [
+62 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-win32-arm64'
+62 silly reify ]
+63 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-linux-x64-musl
+64 silly reify mark deleted [
+64 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-linux-x64-musl'
+64 silly reify ]
+65 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-linux-x64-glibc
+66 silly reify mark deleted [
+66 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-linux-x64-glibc'
+66 silly reify ]
+67 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-linux-arm64-musl
+68 silly reify mark deleted [
+68 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-linux-arm64-musl'
+68 silly reify ]
+69 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-linux-arm64-glibc
+70 silly reify mark deleted [
+70 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-linux-arm64-glibc'
+70 silly reify ]
+71 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-linux-arm-musl
+72 silly reify mark deleted [
+72 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-linux-arm-musl'
+72 silly reify ]
+73 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-linux-arm-glibc
+74 silly reify mark deleted [
+74 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-linux-arm-glibc'
+74 silly reify ]
+75 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-freebsd-x64
+76 silly reify mark deleted [
+76 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-freebsd-x64'
+76 silly reify ]
+77 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-darwin-x64
+78 silly reify mark deleted [
+78 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-darwin-x64'
+78 silly reify ]
+79 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-darwin-arm64
+80 silly reify mark deleted [
+80 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-darwin-arm64'
+80 silly reify ]
+81 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-android-arm64
+82 silly reify mark deleted [
+82 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-android-arm64'
+82 silly reify ]
+83 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\win32-ia32
+84 silly reify mark deleted [
+84 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\win32-ia32'
+84 silly reify ]
+85 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\win32-arm64
+86 silly reify mark deleted [
+86 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\win32-arm64'
+86 silly reify ]
+87 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\sunos-x64
+88 silly reify mark deleted [
+88 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\sunos-x64'
+88 silly reify ]
+89 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\openharmony-arm64
+90 silly reify mark deleted [
+90 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\openharmony-arm64'
+90 silly reify ]
+91 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\openbsd-x64
+92 silly reify mark deleted [
+92 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\openbsd-x64'
+92 silly reify ]
+93 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\openbsd-arm64
+94 silly reify mark deleted [
+94 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\openbsd-arm64'
+94 silly reify ]
+95 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\netbsd-x64
+96 silly reify mark deleted [
+96 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\netbsd-x64'
+96 silly reify ]
+97 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\netbsd-arm64
+98 silly reify mark deleted [
+98 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\netbsd-arm64'
+98 silly reify ]
+99 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-x64
+100 silly reify mark deleted [
+100 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-x64'
+100 silly reify ]
+101 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-s390x
+102 silly reify mark deleted [
+102 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-s390x'
+102 silly reify ]
+103 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-riscv64
+104 silly reify mark deleted [
+104 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-riscv64'
+104 silly reify ]
+105 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-ppc64
+106 silly reify mark deleted [
+106 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-ppc64'
+106 silly reify ]
+107 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-mips64el
+108 silly reify mark deleted [
+108 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-mips64el'
+108 silly reify ]
+109 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-loong64
+110 silly reify mark deleted [
+110 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-loong64'
+110 silly reify ]
+111 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-ia32
+112 silly reify mark deleted [
+112 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-ia32'
+112 silly reify ]
+113 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-arm64
+114 silly reify mark deleted [
+114 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-arm64'
+114 silly reify ]
+115 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-arm
+116 silly reify mark deleted [
+116 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-arm'
+116 silly reify ]
+117 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\freebsd-x64
+118 silly reify mark deleted [
+118 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\freebsd-x64'
+118 silly reify ]
+119 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\freebsd-arm64
+120 silly reify mark deleted [
+120 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\freebsd-arm64'
+120 silly reify ]
+121 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\darwin-x64
+122 silly reify mark deleted [
+122 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\darwin-x64'
+122 silly reify ]
+123 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\darwin-arm64
+124 silly reify mark deleted [
+124 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\darwin-arm64'
+124 silly reify ]
+125 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\android-x64
+126 silly reify mark deleted [
+126 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\android-x64'
+126 silly reify ]
+127 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\android-arm64
+128 silly reify mark deleted [
+128 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\android-arm64'
+128 silly reify ]
+129 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\android-arm
+130 silly reify mark deleted [
+130 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\android-arm'
+130 silly reify ]
+131 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\aix-ppc64
+132 silly reify mark deleted [
+132 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\aix-ppc64'
+132 silly reify ]
+133 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 496ms
+134 silly audit report {}
+135 silly ADD
+136 silly ADD
+137 silly ADD
+138 silly ADD
+139 silly ADD
+140 silly ADD
+141 silly ADD
+142 silly ADD
+143 silly ADD
+144 silly ADD
+145 silly ADD
+146 silly ADD
+147 silly ADD
+148 silly ADD
+149 silly ADD
+150 silly ADD
+151 silly ADD
+152 silly ADD
+153 silly ADD
+154 silly ADD
+155 silly ADD
+156 silly ADD
+157 silly ADD
+158 silly ADD
+159 silly ADD
+160 silly ADD
+161 silly ADD
+162 silly ADD
+163 silly ADD
+164 silly ADD
+165 silly ADD
+166 silly ADD
+167 silly ADD
+168 silly ADD
+169 silly ADD
+170 silly ADD
+171 silly ADD
+172 silly ADD
+173 silly ADD
+174 silly ADD
+175 silly ADD
+176 silly ADD
+177 silly ADD
+178 silly ADD
+179 silly ADD
+180 silly ADD
+181 silly ADD
+182 silly ADD
+183 silly ADD
+184 silly ADD
+185 silly ADD
+186 silly ADD
+187 silly ADD
+188 silly ADD
+189 silly ADD
+190 silly ADD
+191 silly ADD
+192 silly ADD
+193 verbose cwd C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app
+194 verbose os Windows_NT 10.0.26100
+195 verbose node v20.19.0
+196 verbose npm  v10.8.2
+197 verbose exit 0
+198 info ok

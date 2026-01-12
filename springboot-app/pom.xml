@@ -83,6 +83,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- 百度智能云 AppBuilder SDK -->
+        <dependency>
+            <groupId>com.baidubce</groupId>
+            <artifactId>appbuilder</artifactId>
+            <version>0.9.1</version>
+        </dependency>
     </dependencies>
 
     <build>

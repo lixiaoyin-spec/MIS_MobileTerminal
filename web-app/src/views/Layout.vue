@@ -36,6 +36,10 @@ const handleLogout = () => {
           <el-icon><component is="Timer" /></el-icon>
           <span>每日打卡</span>
         </el-menu-item>
+        <el-menu-item index="/dashboard/ai">
+          <el-icon><component is="MagicStick" /></el-icon>
+          <span>AI 助手</span>
+        </el-menu-item>
       </el-menu>
     </el-aside>
     

@@ -47,6 +47,11 @@ const router = createRouter({
           path: 'clock',
           name: 'clock',
           component: () => import('../views/ClockList.vue')
+        },
+        {
+          path: 'ai',
+          name: 'ai-chat',
+          component: () => import('../views/AiChat.vue')
         }
       ]
     }

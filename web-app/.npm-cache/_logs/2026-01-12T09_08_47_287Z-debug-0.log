@@ -1,0 +1,778 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.2
+2 info using node@v20.19.0
+3 silly config load:file:C:\Users\34565\AppData\Roaming\nvm\v20.19.0\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\.npmrc
+5 silly config load:file:C:\Users\34565\.npmrc
+6 silly config load:file:C:\Program Files\nodejs\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\.npm-cache\_logs\2026-01-12T09_08_47_287Z-
+10 verbose logfile C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\.npm-cache\_logs\2026-01-12T09_08_47_287Z-debug-0.log
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly reify moves {}
+15 silly audit bulk request {
+15 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+15 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+15 silly audit   '@babel/parser': [ '7.28.5' ],
+15 silly audit   '@babel/types': [ '7.28.5' ],
+15 silly audit   '@ctrl/tinycolor': [ '3.6.1' ],
+15 silly audit   '@element-plus/icons-vue': [ '2.3.2' ],
+15 silly audit   '@esbuild/aix-ppc64': [ '0.25.12' ],
+15 silly audit   '@esbuild/android-arm': [ '0.25.12' ],
+15 silly audit   '@esbuild/android-arm64': [ '0.25.12' ],
+15 silly audit   '@esbuild/android-x64': [ '0.25.12' ],
+15 silly audit   '@esbuild/darwin-arm64': [ '0.25.12' ],
+15 silly audit   '@esbuild/darwin-x64': [ '0.25.12' ],
+15 silly audit   '@esbuild/freebsd-arm64': [ '0.25.12' ],
+15 silly audit   '@esbuild/freebsd-x64': [ '0.25.12' ],
+15 silly audit   '@esbuild/linux-arm': [ '0.25.12' ],
+15 silly audit   '@esbuild/linux-arm64': [ '0.25.12' ],
+15 silly audit   '@esbuild/linux-ia32': [ '0.25.12' ],
+15 silly audit   '@esbuild/linux-loong64': [ '0.25.12' ],
+15 silly audit   '@esbuild/linux-mips64el': [ '0.25.12' ],
+15 silly audit   '@esbuild/linux-ppc64': [ '0.25.12' ],
+15 silly audit   '@esbuild/linux-riscv64': [ '0.25.12' ],
+15 silly audit   '@esbuild/linux-s390x': [ '0.25.12' ],
+15 silly audit   '@esbuild/linux-x64': [ '0.25.12' ],
+15 silly audit   '@esbuild/netbsd-arm64': [ '0.25.12' ],
+15 silly audit   '@esbuild/netbsd-x64': [ '0.25.12' ],
+15 silly audit   '@esbuild/openbsd-arm64': [ '0.25.12' ],
+15 silly audit   '@esbuild/openbsd-x64': [ '0.25.12' ],
+15 silly audit   '@esbuild/openharmony-arm64': [ '0.25.12' ],
+15 silly audit   '@esbuild/sunos-x64': [ '0.25.12' ],
+15 silly audit   '@esbuild/win32-arm64': [ '0.25.12' ],
+15 silly audit   '@esbuild/win32-ia32': [ '0.25.12' ],
+15 silly audit   '@esbuild/win32-x64': [ '0.25.12' ],
+15 silly audit   '@floating-ui/core': [ '1.7.3' ],
+15 silly audit   '@floating-ui/dom': [ '1.7.4' ],
+15 silly audit   '@floating-ui/utils': [ '0.2.10' ],
+15 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+15 silly audit   '@parcel/watcher': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-android-arm64': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-darwin-arm64': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-darwin-x64': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-freebsd-x64': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-linux-arm-glibc': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-linux-arm-musl': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-linux-arm64-glibc': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-linux-arm64-musl': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-linux-x64-glibc': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-linux-x64-musl': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-win32-arm64': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-win32-ia32': [ '2.5.1' ],
+15 silly audit   '@parcel/watcher-win32-x64': [ '2.5.1' ],
+15 silly audit   '@sxzz/popperjs-es': [ '2.11.7' ],
+15 silly audit   '@rollup/rollup-android-arm-eabi': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-android-arm64': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-darwin-arm64': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-darwin-x64': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-freebsd-arm64': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-freebsd-x64': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-linux-arm-gnueabihf': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-linux-arm-musleabihf': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-linux-arm64-gnu': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-linux-arm64-musl': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-linux-loong64-gnu': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-linux-ppc64-gnu': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-linux-riscv64-gnu': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-linux-riscv64-musl': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-linux-s390x-gnu': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-linux-x64-gnu': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-linux-x64-musl': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-openharmony-arm64': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-win32-arm64-msvc': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-win32-ia32-msvc': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-win32-x64-gnu': [ '4.53.3' ],
+15 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.53.3' ],
+15 silly audit   '@types/estree': [ '1.0.8' ],
+15 silly audit   '@types/lodash': [ '4.17.21' ],
+15 silly audit   '@types/lodash-es': [ '4.17.12' ],
+15 silly audit   '@types/web-bluetooth': [ '0.0.16' ],
+15 silly audit   '@vitejs/plugin-vue': [ '5.2.4' ],
+15 silly audit   '@vue/compiler-core': [ '3.5.25' ],
+15 silly audit   '@vue/compiler-dom': [ '3.5.25' ],
+15 silly audit   '@vue/compiler-sfc': [ '3.5.25' ],
+15 silly audit   '@vue/compiler-ssr': [ '3.5.25' ],
+15 silly audit   '@vue/devtools-api': [ '6.6.4' ],
+15 silly audit   '@vue/reactivity': [ '3.5.25' ],
+15 silly audit   '@vue/runtime-core': [ '3.5.25' ],
+15 silly audit   '@vue/runtime-dom': [ '3.5.25' ],
+15 silly audit   '@vue/server-renderer': [ '3.5.25' ],
+15 silly audit   '@vue/shared': [ '3.5.25' ],
+15 silly audit   '@vueuse/core': [ '9.13.0' ],
+15 silly audit   '@vueuse/metadata': [ '9.13.0' ],
+15 silly audit   '@vueuse/shared': [ '9.13.0' ],
+15 silly audit   'async-validator': [ '4.2.5' ],
+15 silly audit   asynckit: [ '0.4.0' ],
+15 silly audit   axios: [ '1.13.2' ],
+15 silly audit   braces: [ '3.0.3' ],
+15 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+15 silly audit   chokidar: [ '4.0.3' ],
+15 silly audit   'combined-stream': [ '1.0.8' ],
+15 silly audit   csstype: [ '3.2.3' ],
+15 silly audit   dayjs: [ '1.11.19' ],
+15 silly audit   'delayed-stream': [ '1.0.0' ],
+15 silly audit   'detect-libc': [ '1.0.3' ],
+15 silly audit   'dunder-proto': [ '1.0.1' ],
+15 silly audit   'element-plus': [ '2.11.8' ],
+15 silly audit   entities: [ '4.5.0' ],
+15 silly audit   'es-define-property': [ '1.0.1' ],
+15 silly audit   'es-errors': [ '1.3.0' ],
+15 silly audit   'es-object-atoms': [ '1.1.1' ],
+15 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+15 silly audit   esbuild: [ '0.25.12' ],
+15 silly audit   'estree-walker': [ '2.0.2' ],
+15 silly audit   'fill-range': [ '7.1.1' ],
+15 silly audit   'follow-redirects': [ '1.15.11' ],
+15 silly audit   'form-data': [ '4.0.5' ],
+15 silly audit   fsevents: [ '2.3.3' ],
+15 silly audit   'function-bind': [ '1.1.2' ],
+15 silly audit   'get-intrinsic': [ '1.3.0' ],
+15 silly audit   'get-proto': [ '1.0.1' ],
+15 silly audit   gopd: [ '1.2.0' ],
+15 silly audit   'has-symbols': [ '1.1.0' ],
+15 silly audit   'has-tostringtag': [ '1.0.2' ],
+15 silly audit   hasown: [ '2.0.2' ],
+15 silly audit   immutable: [ '5.1.4' ],
+15 silly audit   'is-extglob': [ '2.1.1' ],
+15 silly audit   'is-glob': [ '4.0.3' ],
+15 silly audit   'is-number': [ '7.0.0' ],
+15 silly audit   lodash: [ '4.17.21' ],
+15 silly audit   'lodash-es': [ '4.17.21' ],
+15 silly audit   'lodash-unified': [ '1.0.3' ],
+15 silly audit   'magic-string': [ '0.30.21' ],
+15 silly audit   'math-intrinsics': [ '1.1.0' ],
+15 silly audit   'memoize-one': [ '6.0.0' ],
+15 silly audit   micromatch: [ '4.0.8' ],
+15 silly audit   'mime-db': [ '1.52.0' ],
+15 silly audit   'mime-types': [ '2.1.35' ],
+15 silly audit   nanoid: [ '3.3.11' ],
+15 silly audit   'node-addon-api': [ '7.1.1' ],
+15 silly audit   'normalize-wheel-es': [ '1.2.0' ],
+15 silly audit   picocolors: [ '1.1.1' ],
+15 silly audit   picomatch: [ '2.3.1', '4.0.3' ],
+15 silly audit   pinia: [ '2.3.1' ],
+15 silly audit   postcss: [ '8.5.6' ],
+15 silly audit   'proxy-from-env': [ '1.1.0' ],
+15 silly audit   readdirp: [ '4.1.2' ],
+15 silly audit   rollup: [ '4.53.3' ],
+15 silly audit   sass: [ '1.94.2' ],
+15 silly audit   'source-map-js': [ '1.2.1' ],
+15 silly audit   tinyglobby: [ '0.2.15' ],
+15 silly audit   fdir: [ '6.5.0' ],
+15 silly audit   'to-regex-range': [ '5.0.1' ],
+15 silly audit   vite: [ '6.4.1' ],
+15 silly audit   vue: [ '3.5.25' ],
+15 silly audit   'vue-demi': [ '0.14.10' ],
+15 silly audit   'vue-router': [ '4.6.3' ]
+15 silly audit }
+16 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\fsevents
+17 silly reify mark deleted [
+17 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\fsevents'
+17 silly reify ]
+18 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-win32-ia32-msvc
+19 silly reify mark deleted [
+19 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-win32-ia32-msvc'
+19 silly reify ]
+20 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-win32-arm64-msvc
+21 silly reify mark deleted [
+21 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-win32-arm64-msvc'
+21 silly reify ]
+22 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-openharmony-arm64
+23 silly reify mark deleted [
+23 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-openharmony-arm64'
+23 silly reify ]
+24 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-x64-musl
+25 silly reify mark deleted [
+25 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-x64-musl'
+25 silly reify ]
+26 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-x64-gnu
+27 silly reify mark deleted [
+27 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-x64-gnu'
+27 silly reify ]
+28 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-s390x-gnu
+29 silly reify mark deleted [
+29 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-s390x-gnu'
+29 silly reify ]
+30 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-riscv64-musl
+31 silly reify mark deleted [
+31 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-riscv64-musl'
+31 silly reify ]
+32 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-riscv64-gnu
+33 silly reify mark deleted [
+33 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-riscv64-gnu'
+33 silly reify ]
+34 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-ppc64-gnu
+35 silly reify mark deleted [
+35 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-ppc64-gnu'
+35 silly reify ]
+36 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-loong64-gnu
+37 silly reify mark deleted [
+37 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-loong64-gnu'
+37 silly reify ]
+38 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-arm64-musl
+39 silly reify mark deleted [
+39 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-arm64-musl'
+39 silly reify ]
+40 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-arm64-gnu
+41 silly reify mark deleted [
+41 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-arm64-gnu'
+41 silly reify ]
+42 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-arm-musleabihf
+43 silly reify mark deleted [
+43 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-arm-musleabihf'
+43 silly reify ]
+44 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-linux-arm-gnueabihf
+45 silly reify mark deleted [
+45 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-linux-arm-gnueabihf'
+45 silly reify ]
+46 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-freebsd-x64
+47 silly reify mark deleted [
+47 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-freebsd-x64'
+47 silly reify ]
+48 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-freebsd-arm64
+49 silly reify mark deleted [
+49 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-freebsd-arm64'
+49 silly reify ]
+50 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-darwin-x64
+51 silly reify mark deleted [
+51 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-darwin-x64'
+51 silly reify ]
+52 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-darwin-arm64
+53 silly reify mark deleted [
+53 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-darwin-arm64'
+53 silly reify ]
+54 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-android-arm64
+55 silly reify mark deleted [
+55 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-android-arm64'
+55 silly reify ]
+56 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@rollup\rollup-android-arm-eabi
+57 silly reify mark deleted [
+57 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@rollup\\rollup-android-arm-eabi'
+57 silly reify ]
+58 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-win32-ia32
+59 silly reify mark deleted [
+59 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-win32-ia32'
+59 silly reify ]
+60 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-win32-arm64
+61 silly reify mark deleted [
+61 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-win32-arm64'
+61 silly reify ]
+62 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-linux-x64-musl
+63 silly reify mark deleted [
+63 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-linux-x64-musl'
+63 silly reify ]
+64 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-linux-x64-glibc
+65 silly reify mark deleted [
+65 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-linux-x64-glibc'
+65 silly reify ]
+66 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-linux-arm64-musl
+67 silly reify mark deleted [
+67 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-linux-arm64-musl'
+67 silly reify ]
+68 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-linux-arm64-glibc
+69 silly reify mark deleted [
+69 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-linux-arm64-glibc'
+69 silly reify ]
+70 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-linux-arm-musl
+71 silly reify mark deleted [
+71 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-linux-arm-musl'
+71 silly reify ]
+72 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-linux-arm-glibc
+73 silly reify mark deleted [
+73 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-linux-arm-glibc'
+73 silly reify ]
+74 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-freebsd-x64
+75 silly reify mark deleted [
+75 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-freebsd-x64'
+75 silly reify ]
+76 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-darwin-x64
+77 silly reify mark deleted [
+77 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-darwin-x64'
+77 silly reify ]
+78 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-darwin-arm64
+79 silly reify mark deleted [
+79 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-darwin-arm64'
+79 silly reify ]
+80 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@parcel\watcher-android-arm64
+81 silly reify mark deleted [
+81 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@parcel\\watcher-android-arm64'
+81 silly reify ]
+82 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\win32-ia32
+83 silly reify mark deleted [
+83 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\win32-ia32'
+83 silly reify ]
+84 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\win32-arm64
+85 silly reify mark deleted [
+85 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\win32-arm64'
+85 silly reify ]
+86 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\sunos-x64
+87 silly reify mark deleted [
+87 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\sunos-x64'
+87 silly reify ]
+88 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\openharmony-arm64
+89 silly reify mark deleted [
+89 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\openharmony-arm64'
+89 silly reify ]
+90 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\openbsd-x64
+91 silly reify mark deleted [
+91 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\openbsd-x64'
+91 silly reify ]
+92 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\openbsd-arm64
+93 silly reify mark deleted [
+93 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\openbsd-arm64'
+93 silly reify ]
+94 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\netbsd-x64
+95 silly reify mark deleted [
+95 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\netbsd-x64'
+95 silly reify ]
+96 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\netbsd-arm64
+97 silly reify mark deleted [
+97 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\netbsd-arm64'
+97 silly reify ]
+98 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-x64
+99 silly reify mark deleted [
+99 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-x64'
+99 silly reify ]
+100 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-s390x
+101 silly reify mark deleted [
+101 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-s390x'
+101 silly reify ]
+102 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-riscv64
+103 silly reify mark deleted [
+103 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-riscv64'
+103 silly reify ]
+104 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-ppc64
+105 silly reify mark deleted [
+105 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-ppc64'
+105 silly reify ]
+106 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-mips64el
+107 silly reify mark deleted [
+107 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-mips64el'
+107 silly reify ]
+108 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-loong64
+109 silly reify mark deleted [
+109 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-loong64'
+109 silly reify ]
+110 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-ia32
+111 silly reify mark deleted [
+111 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-ia32'
+111 silly reify ]
+112 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-arm64
+113 silly reify mark deleted [
+113 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-arm64'
+113 silly reify ]
+114 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\linux-arm
+115 silly reify mark deleted [
+115 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\linux-arm'
+115 silly reify ]
+116 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\freebsd-x64
+117 silly reify mark deleted [
+117 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\freebsd-x64'
+117 silly reify ]
+118 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\freebsd-arm64
+119 silly reify mark deleted [
+119 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\freebsd-arm64'
+119 silly reify ]
+120 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\darwin-x64
+121 silly reify mark deleted [
+121 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\darwin-x64'
+121 silly reify ]
+122 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\darwin-arm64
+123 silly reify mark deleted [
+123 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\darwin-arm64'
+123 silly reify ]
+124 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\android-x64
+125 silly reify mark deleted [
+125 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\android-x64'
+125 silly reify ]
+126 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\android-arm64
+127 silly reify mark deleted [
+127 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\android-arm64'
+127 silly reify ]
+128 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\android-arm
+129 silly reify mark deleted [
+129 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\android-arm'
+129 silly reify ]
+130 verbose reify failed optional dependency C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app\node_modules\@esbuild\aix-ppc64
+131 silly reify mark deleted [
+131 silly reify   'C:\\Users\\34565\\Desktop\\MIS\\MIS_MobileTerminal\\web-app\\node_modules\\@esbuild\\aix-ppc64'
+131 silly reify ]
+132 silly tarball no local data for vite@https://registry.npmmirror.com/vite/-/vite-6.4.1.tgz. Extracting by manifest.
+133 silly tarball no local data for vue-router@https://registry.npmmirror.com/vue-router/-/vue-router-4.6.3.tgz. Extracting by manifest.
+134 silly tarball no local data for vue-demi@https://registry.npmmirror.com/vue-demi/-/vue-demi-0.14.10.tgz. Extracting by manifest.
+135 silly tarball no local data for vue@https://registry.npmmirror.com/vue/-/vue-3.5.25.tgz. Extracting by manifest.
+136 silly tarball no local data for to-regex-range@https://registry.npmmirror.com/to-regex-range/-/to-regex-range-5.0.1.tgz. Extracting by manifest.
+137 silly tarball no local data for tinyglobby@https://registry.npmmirror.com/tinyglobby/-/tinyglobby-0.2.15.tgz. Extracting by manifest.
+138 silly tarball no local data for sass@https://registry.npmmirror.com/sass/-/sass-1.94.2.tgz. Extracting by manifest.
+139 silly tarball no local data for source-map-js@https://registry.npmmirror.com/source-map-js/-/source-map-js-1.2.1.tgz. Extracting by manifest.
+140 silly tarball no local data for rollup@https://registry.npmmirror.com/rollup/-/rollup-4.53.3.tgz. Extracting by manifest.
+141 silly tarball no local data for readdirp@https://registry.npmmirror.com/readdirp/-/readdirp-4.1.2.tgz. Extracting by manifest.
+142 silly tarball no local data for pinia@https://registry.npmmirror.com/pinia/-/pinia-2.3.1.tgz. Extracting by manifest.
+143 silly tarball no local data for proxy-from-env@https://registry.npmmirror.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz. Extracting by manifest.
+144 silly tarball no local data for postcss@https://registry.npmmirror.com/postcss/-/postcss-8.5.6.tgz. Extracting by manifest.
+145 silly tarball no local data for picomatch@https://registry.npmmirror.com/picomatch/-/picomatch-2.3.1.tgz. Extracting by manifest.
+146 silly tarball no local data for normalize-wheel-es@https://registry.npmmirror.com/normalize-wheel-es/-/normalize-wheel-es-1.2.0.tgz. Extracting by manifest.
+147 silly tarball no local data for picocolors@https://registry.npmmirror.com/picocolors/-/picocolors-1.1.1.tgz. Extracting by manifest.
+148 silly tarball no local data for node-addon-api@https://registry.npmmirror.com/node-addon-api/-/node-addon-api-7.1.1.tgz. Extracting by manifest.
+149 silly tarball no local data for nanoid@https://registry.npmmirror.com/nanoid/-/nanoid-3.3.11.tgz. Extracting by manifest.
+150 silly tarball no local data for mime-types@https://registry.npmmirror.com/mime-types/-/mime-types-2.1.35.tgz. Extracting by manifest.
+151 silly tarball no local data for mime-db@https://registry.npmmirror.com/mime-db/-/mime-db-1.52.0.tgz. Extracting by manifest.
+152 silly tarball no local data for micromatch@https://registry.npmmirror.com/micromatch/-/micromatch-4.0.8.tgz. Extracting by manifest.
+153 silly tarball no local data for memoize-one@https://registry.npmmirror.com/memoize-one/-/memoize-one-6.0.0.tgz. Extracting by manifest.
+154 silly tarball no local data for math-intrinsics@https://registry.npmmirror.com/math-intrinsics/-/math-intrinsics-1.1.0.tgz. Extracting by manifest.
+155 silly tarball no local data for magic-string@https://registry.npmmirror.com/magic-string/-/magic-string-0.30.21.tgz. Extracting by manifest.
+156 silly tarball no local data for lodash-unified@https://registry.npmmirror.com/lodash-unified/-/lodash-unified-1.0.3.tgz. Extracting by manifest.
+157 silly tarball no local data for lodash-es@https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz. Extracting by manifest.
+158 silly tarball no local data for lodash@https://registry.npmmirror.com/lodash/-/lodash-4.17.21.tgz. Extracting by manifest.
+159 silly tarball no local data for is-number@https://registry.npmmirror.com/is-number/-/is-number-7.0.0.tgz. Extracting by manifest.
+160 silly tarball no local data for is-glob@https://registry.npmmirror.com/is-glob/-/is-glob-4.0.3.tgz. Extracting by manifest.
+161 silly tarball no local data for immutable@https://registry.npmmirror.com/immutable/-/immutable-5.1.4.tgz. Extracting by manifest.
+162 silly tarball no local data for is-extglob@https://registry.npmmirror.com/is-extglob/-/is-extglob-2.1.1.tgz. Extracting by manifest.
+163 silly tarball no local data for hasown@https://registry.npmmirror.com/hasown/-/hasown-2.0.2.tgz. Extracting by manifest.
+164 silly tarball no local data for has-tostringtag@https://registry.npmmirror.com/has-tostringtag/-/has-tostringtag-1.0.2.tgz. Extracting by manifest.
+165 silly tarball no local data for has-symbols@https://registry.npmmirror.com/has-symbols/-/has-symbols-1.1.0.tgz. Extracting by manifest.
+166 silly tarball no local data for get-proto@https://registry.npmmirror.com/get-proto/-/get-proto-1.0.1.tgz. Extracting by manifest.
+167 silly tarball no local data for gopd@https://registry.npmmirror.com/gopd/-/gopd-1.2.0.tgz. Extracting by manifest.
+168 silly tarball no local data for get-intrinsic@https://registry.npmmirror.com/get-intrinsic/-/get-intrinsic-1.3.0.tgz. Extracting by manifest.
+169 silly tarball no local data for function-bind@https://registry.npmmirror.com/function-bind/-/function-bind-1.1.2.tgz. Extracting by manifest.
+170 silly tarball no local data for form-data@https://registry.npmmirror.com/form-data/-/form-data-4.0.5.tgz. Extracting by manifest.
+171 silly tarball no local data for follow-redirects@https://registry.npmmirror.com/follow-redirects/-/follow-redirects-1.15.11.tgz. Extracting by manifest.
+172 silly tarball no local data for estree-walker@https://registry.npmmirror.com/estree-walker/-/estree-walker-2.0.2.tgz. Extracting by manifest.
+173 silly tarball no local data for fill-range@https://registry.npmmirror.com/fill-range/-/fill-range-7.1.1.tgz. Extracting by manifest.
+174 silly tarball no local data for esbuild@https://registry.npmmirror.com/esbuild/-/esbuild-0.25.12.tgz. Extracting by manifest.
+175 silly tarball no local data for es-set-tostringtag@https://registry.npmmirror.com/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz. Extracting by manifest.
+176 silly tarball no local data for es-object-atoms@https://registry.npmmirror.com/es-object-atoms/-/es-object-atoms-1.1.1.tgz. Extracting by manifest.
+177 silly tarball no local data for es-define-property@https://registry.npmmirror.com/es-define-property/-/es-define-property-1.0.1.tgz. Extracting by manifest.
+178 silly tarball no local data for entities@https://registry.npmmirror.com/entities/-/entities-4.5.0.tgz. Extracting by manifest.
+179 silly tarball no local data for dunder-proto@https://registry.npmmirror.com/dunder-proto/-/dunder-proto-1.0.1.tgz. Extracting by manifest.
+180 silly tarball no local data for element-plus@https://registry.npmmirror.com/element-plus/-/element-plus-2.11.8.tgz. Extracting by manifest.
+181 silly tarball no local data for es-errors@https://registry.npmmirror.com/es-errors/-/es-errors-1.3.0.tgz. Extracting by manifest.
+182 silly tarball no local data for detect-libc@https://registry.npmmirror.com/detect-libc/-/detect-libc-1.0.3.tgz. Extracting by manifest.
+183 silly tarball no local data for delayed-stream@https://registry.npmmirror.com/delayed-stream/-/delayed-stream-1.0.0.tgz. Extracting by manifest.
+184 silly tarball no local data for dayjs@https://registry.npmmirror.com/dayjs/-/dayjs-1.11.19.tgz. Extracting by manifest.
+185 silly tarball no local data for chokidar@https://registry.npmmirror.com/chokidar/-/chokidar-4.0.3.tgz. Extracting by manifest.
+186 silly tarball no local data for combined-stream@https://registry.npmmirror.com/combined-stream/-/combined-stream-1.0.8.tgz. Extracting by manifest.
+187 silly tarball no local data for csstype@https://registry.npmmirror.com/csstype/-/csstype-3.2.3.tgz. Extracting by manifest.
+188 silly tarball no local data for @vue/server-renderer@https://registry.npmmirror.com/@vue/server-renderer/-/server-renderer-3.5.25.tgz. Extracting by manifest.
+189 silly tarball no local data for @vueuse/metadata@https://registry.npmmirror.com/@vueuse/metadata/-/metadata-9.13.0.tgz. Extracting by manifest.
+190 silly tarball no local data for braces@https://registry.npmmirror.com/braces/-/braces-3.0.3.tgz. Extracting by manifest.
+191 silly tarball no local data for call-bind-apply-helpers@https://registry.npmmirror.com/call-bind-apply-helpers/-/call-bind-apply-helpers-1.0.2.tgz. Extracting by manifest.
+192 silly tarball no local data for asynckit@https://registry.npmmirror.com/asynckit/-/asynckit-0.4.0.tgz. Extracting by manifest.
+193 silly tarball no local data for axios@https://registry.npmmirror.com/axios/-/axios-1.13.2.tgz. Extracting by manifest.
+194 silly tarball no local data for async-validator@https://registry.npmmirror.com/async-validator/-/async-validator-4.2.5.tgz. Extracting by manifest.
+195 silly tarball no local data for @vueuse/shared@https://registry.npmmirror.com/@vueuse/shared/-/shared-9.13.0.tgz. Extracting by manifest.
+196 silly tarball no local data for @vueuse/core@https://registry.npmmirror.com/@vueuse/core/-/core-9.13.0.tgz. Extracting by manifest.
+197 silly tarball no local data for @vue/shared@https://registry.npmmirror.com/@vue/shared/-/shared-3.5.25.tgz. Extracting by manifest.
+198 silly tarball no local data for @vue/runtime-core@https://registry.npmmirror.com/@vue/runtime-core/-/runtime-core-3.5.25.tgz. Extracting by manifest.
+199 silly tarball no local data for @vitejs/plugin-vue@https://registry.npmmirror.com/@vitejs/plugin-vue/-/plugin-vue-5.2.4.tgz. Extracting by manifest.
+200 silly tarball no local data for @vue/reactivity@https://registry.npmmirror.com/@vue/reactivity/-/reactivity-3.5.25.tgz. Extracting by manifest.
+201 silly tarball no local data for @vue/runtime-dom@https://registry.npmmirror.com/@vue/runtime-dom/-/runtime-dom-3.5.25.tgz. Extracting by manifest.
+202 silly tarball no local data for @types/web-bluetooth@https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.16.tgz. Extracting by manifest.
+203 silly tarball no local data for @rollup/rollup-win32-x64-msvc@https://registry.npmmirror.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.53.3.tgz. Extracting by manifest.
+204 silly tarball no local data for @vue/devtools-api@https://registry.npmmirror.com/@vue/devtools-api/-/devtools-api-6.6.4.tgz. Extracting by manifest.
+205 silly tarball no local data for @vue/compiler-sfc@https://registry.npmmirror.com/@vue/compiler-sfc/-/compiler-sfc-3.5.25.tgz. Extracting by manifest.
+206 silly tarball no local data for @vue/compiler-ssr@https://registry.npmmirror.com/@vue/compiler-ssr/-/compiler-ssr-3.5.25.tgz. Extracting by manifest.
+207 silly tarball no local data for @vue/compiler-core@https://registry.npmmirror.com/@vue/compiler-core/-/compiler-core-3.5.25.tgz. Extracting by manifest.
+208 silly tarball no local data for @vue/compiler-dom@https://registry.npmmirror.com/@vue/compiler-dom/-/compiler-dom-3.5.25.tgz. Extracting by manifest.
+209 silly tarball no local data for @popperjs/core@https://registry.npmmirror.com/@sxzz/popperjs-es/-/popperjs-es-2.11.7.tgz. Extracting by manifest.
+210 silly tarball no local data for @rollup/rollup-win32-x64-gnu@https://registry.npmmirror.com/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.53.3.tgz. Extracting by manifest.
+211 silly tarball no local data for @parcel/watcher-win32-x64@https://registry.npmmirror.com/@parcel/watcher-win32-x64/-/watcher-win32-x64-2.5.1.tgz. Extracting by manifest.
+212 silly tarball no local data for @types/lodash-es@https://registry.npmmirror.com/@types/lodash-es/-/lodash-es-4.17.12.tgz. Extracting by manifest.
+213 silly tarball no local data for @jridgewell/sourcemap-codec@https://registry.npmmirror.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz. Extracting by manifest.
+214 silly tarball no local data for @types/lodash@https://registry.npmmirror.com/@types/lodash/-/lodash-4.17.21.tgz. Extracting by manifest.
+215 silly tarball no local data for @types/estree@https://registry.npmmirror.com/@types/estree/-/estree-1.0.8.tgz. Extracting by manifest.
+216 silly tarball no local data for @parcel/watcher@https://registry.npmmirror.com/@parcel/watcher/-/watcher-2.5.1.tgz. Extracting by manifest.
+217 silly tarball no local data for @element-plus/icons-vue@https://registry.npmmirror.com/@element-plus/icons-vue/-/icons-vue-2.3.2.tgz. Extracting by manifest.
+218 silly tarball no local data for @ctrl/tinycolor@https://registry.npmmirror.com/@ctrl/tinycolor/-/tinycolor-3.6.1.tgz. Extracting by manifest.
+219 silly tarball no local data for @floating-ui/core@https://registry.npmmirror.com/@floating-ui/core/-/core-1.7.3.tgz. Extracting by manifest.
+220 silly tarball no local data for @floating-ui/utils@https://registry.npmmirror.com/@floating-ui/utils/-/utils-0.2.10.tgz. Extracting by manifest.
+221 silly tarball no local data for @esbuild/win32-x64@https://registry.npmmirror.com/@esbuild/win32-x64/-/win32-x64-0.25.12.tgz. Extracting by manifest.
+222 silly tarball no local data for @floating-ui/dom@https://registry.npmmirror.com/@floating-ui/dom/-/dom-1.7.4.tgz. Extracting by manifest.
+223 silly tarball no local data for @babel/types@https://registry.npmmirror.com/@babel/types/-/types-7.28.5.tgz. Extracting by manifest.
+224 silly tarball no local data for picomatch@https://registry.npmmirror.com/picomatch/-/picomatch-4.0.3.tgz. Extracting by manifest.
+225 silly tarball no local data for @babel/helper-string-parser@https://registry.npmmirror.com/@babel/helper-string-parser/-/helper-string-parser-7.27.1.tgz. Extracting by manifest.
+226 silly tarball no local data for fdir@https://registry.npmmirror.com/fdir/-/fdir-6.5.0.tgz. Extracting by manifest.
+227 silly tarball no local data for @babel/parser@https://registry.npmmirror.com/@babel/parser/-/parser-7.28.5.tgz. Extracting by manifest.
+228 silly tarball no local data for @babel/helper-validator-identifier@https://registry.npmmirror.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.28.5.tgz. Extracting by manifest.
+229 silly tarball no local data for fdir@https://registry.npmmirror.com/fdir/-/fdir-6.5.0.tgz. Extracting by manifest.
+230 silly tarball no local data for picomatch@https://registry.npmmirror.com/picomatch/-/picomatch-4.0.3.tgz. Extracting by manifest.
+231 http fetch GET 200 https://registry.npmjs.org/npm 569ms
+232 http fetch GET 200 https://cdn.npmmirror.com/packages/proxy-from-env/1.1.0/proxy-from-env-1.1.0.tgz 406ms (cache miss)
+233 http fetch GET 200 https://cdn.npmmirror.com/packages/to-regex-range/5.0.1/to-regex-range-5.0.1.tgz 410ms (cache miss)
+234 http fetch GET 200 https://cdn.npmmirror.com/packages/tinyglobby/0.2.15/tinyglobby-0.2.15.tgz 416ms (cache miss)
+235 http fetch GET 200 https://cdn.npmmirror.com/packages/readdirp/4.1.2/readdirp-4.1.2.tgz 418ms (cache miss)
+236 http fetch GET 200 https://cdn.npmmirror.com/packages/picocolors/1.1.1/picocolors-1.1.1.tgz 436ms (cache miss)
+237 http fetch GET 200 https://cdn.npmmirror.com/packages/memoize-one/6.0.0/memoize-one-6.0.0.tgz 444ms (cache miss)
+238 http fetch GET 200 https://cdn.npmmirror.com/packages/mime-types/2.1.35/mime-types-2.1.35.tgz 447ms (cache miss)
+239 http fetch GET 200 https://cdn.npmmirror.com/packages/normalize-wheel-es/1.2.0/normalize-wheel-es-1.2.0.tgz 453ms (cache miss)
+240 http fetch GET 200 https://cdn.npmmirror.com/packages/lodash-unified/1.0.3/lodash-unified-1.0.3.tgz 474ms (cache miss)
+241 http fetch GET 200 https://cdn.npmmirror.com/packages/micromatch/4.0.8/micromatch-4.0.8.tgz 485ms (cache miss)
+242 http fetch GET 200 https://cdn.npmmirror.com/packages/picomatch/2.3.1/picomatch-2.3.1.tgz 490ms (cache miss)
+243 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 575ms
+244 silly audit report {}
+245 http fetch GET 200 https://cdn.npmmirror.com/packages/is-number/7.0.0/is-number-7.0.0.tgz 513ms (cache miss)
+246 http fetch GET 200 https://cdn.npmmirror.com/packages/is-glob/4.0.3/is-glob-4.0.3.tgz 520ms (cache miss)
+247 http fetch GET 200 https://cdn.npmmirror.com/packages/pinia/2.3.1/pinia-2.3.1.tgz 536ms (cache miss)
+248 http fetch GET 200 https://cdn.npmmirror.com/packages/source-map-js/1.2.1/source-map-js-1.2.1.tgz 557ms (cache miss)
+249 http fetch GET 200 https://cdn.npmmirror.com/packages/vue-demi/0.14.10/vue-demi-0.14.10.tgz 563ms (cache miss)
+250 http fetch GET 200 https://cdn.npmmirror.com/packages/mime-db/1.52.0/mime-db-1.52.0.tgz 581ms (cache miss)
+251 http fetch GET 200 https://cdn.npmmirror.com/packages/is-extglob/2.1.1/is-extglob-2.1.1.tgz 578ms (cache miss)
+252 http fetch GET 200 https://cdn.npmmirror.com/packages/has-tostringtag/1.0.2/has-tostringtag-1.0.2.tgz 593ms (cache miss)
+253 http fetch GET 200 https://cdn.npmmirror.com/packages/magic-string/0.30.21/magic-string-0.30.21.tgz 612ms (cache miss)
+254 http fetch GET 200 https://cdn.npmmirror.com/packages/hasown/2.0.2/hasown-2.0.2.tgz 609ms (cache miss)
+255 http fetch GET 200 https://cdn.npmmirror.com/packages/node-addon-api/7.1.1/node-addon-api-7.1.1.tgz 620ms (cache miss)
+256 http fetch GET 200 https://cdn.npmmirror.com/packages/nanoid/3.3.11/nanoid-3.3.11.tgz 622ms (cache miss)
+257 http fetch GET 200 https://cdn.npmmirror.com/packages/function-bind/1.1.2/function-bind-1.1.2.tgz 647ms (cache miss)
+258 http fetch GET 200 https://cdn.npmmirror.com/packages/gopd/1.2.0/gopd-1.2.0.tgz 673ms (cache miss)
+259 http fetch GET 200 https://cdn.npmmirror.com/packages/get-intrinsic/1.3.0/get-intrinsic-1.3.0.tgz 679ms (cache miss)
+260 http fetch GET 200 https://cdn.npmmirror.com/packages/vue-router/4.6.3/vue-router-4.6.3.tgz 703ms (cache miss)
+261 http fetch GET 200 https://cdn.npmmirror.com/packages/immutable/5.1.4/immutable-5.1.4.tgz 694ms (cache miss)
+262 http fetch GET 200 https://cdn.npmmirror.com/packages/get-proto/1.0.1/get-proto-1.0.1.tgz 696ms (cache miss)
+263 http fetch GET 200 https://cdn.npmmirror.com/packages/form-data/4.0.5/form-data-4.0.5.tgz 695ms (cache miss)
+264 http fetch GET 200 https://cdn.npmmirror.com/packages/fill-range/7.1.1/fill-range-7.1.1.tgz 693ms (cache miss)
+265 http fetch GET 200 https://cdn.npmmirror.com/packages/es-set-tostringtag/2.1.0/es-set-tostringtag-2.1.0.tgz 692ms (cache miss)
+266 http fetch GET 200 https://cdn.npmmirror.com/packages/follow-redirects/1.15.11/follow-redirects-1.15.11.tgz 696ms (cache miss)
+267 http fetch GET 200 https://cdn.npmmirror.com/packages/math-intrinsics/1.1.0/math-intrinsics-1.1.0.tgz 705ms (cache miss)
+268 http fetch GET 200 https://cdn.npmmirror.com/packages/has-symbols/1.1.0/has-symbols-1.1.0.tgz 704ms (cache miss)
+269 http fetch GET 200 https://cdn.npmmirror.com/packages/es-object-atoms/1.1.1/es-object-atoms-1.1.1.tgz 700ms (cache miss)
+270 http fetch GET 200 https://cdn.npmmirror.com/packages/esbuild/0.25.12/esbuild-0.25.12.tgz 715ms (cache miss)
+271 http fetch GET 200 https://cdn.npmmirror.com/packages/detect-libc/1.0.3/detect-libc-1.0.3.tgz 730ms (cache miss)
+272 http fetch GET 200 https://cdn.npmmirror.com/packages/delayed-stream/1.0.0/delayed-stream-1.0.0.tgz 770ms (cache miss)
+273 http fetch GET 200 https://cdn.npmmirror.com/packages/combined-stream/1.0.8/combined-stream-1.0.8.tgz 776ms (cache miss)
+274 http fetch GET 200 https://cdn.npmmirror.com/packages/postcss/8.5.6/postcss-8.5.6.tgz 835ms (cache miss)
+275 http fetch GET 200 https://cdn.npmmirror.com/packages/dunder-proto/1.0.1/dunder-proto-1.0.1.tgz 836ms (cache miss)
+276 http fetch GET 200 https://cdn.npmmirror.com/packages/estree-walker/2.0.2/estree-walker-2.0.2.tgz 847ms (cache miss)
+277 http fetch GET 200 https://cdn.npmmirror.com/packages/es-errors/1.3.0/es-errors-1.3.0.tgz 844ms (cache miss)
+278 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vueuse/metadata/9.13.0/metadata-9.13.0.tgz 869ms (cache miss)
+279 http fetch GET 200 https://cdn.npmmirror.com/packages/rollup/4.53.3/rollup-4.53.3.tgz 899ms (cache miss)
+280 http fetch GET 200 https://cdn.npmmirror.com/packages/chokidar/4.0.3/chokidar-4.0.3.tgz 887ms (cache miss)
+281 http fetch GET 200 https://cdn.npmmirror.com/packages/braces/3.0.3/braces-3.0.3.tgz 901ms (cache miss)
+282 http fetch GET 200 https://cdn.npmmirror.com/packages/call-bind-apply-helpers/1.0.2/call-bind-apply-helpers-1.0.2.tgz 947ms (cache miss)
+283 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vueuse/shared/9.13.0/shared-9.13.0.tgz 982ms (cache miss)
+284 http fetch GET 200 https://cdn.npmmirror.com/packages/csstype/3.2.3/csstype-3.2.3.tgz 987ms (cache miss)
+285 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/shared/3.5.25/shared-3.5.25.tgz 1086ms (cache miss)
+286 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/web-bluetooth/0.0.16/web-bluetooth-0.0.16.tgz 1086ms (cache miss)
+287 http fetch GET 200 https://cdn.npmmirror.com/packages/entities/4.5.0/entities-4.5.0.tgz 1108ms (cache miss)
+288 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vitejs/plugin-vue/5.2.4/plugin-vue-5.2.4.tgz 1106ms (cache miss)
+289 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/server-renderer/3.5.25/server-renderer-3.5.25.tgz 1111ms (cache miss)
+290 http fetch GET 200 https://cdn.npmmirror.com/packages/async-validator/4.2.5/async-validator-4.2.5.tgz 1129ms (cache miss)
+291 http fetch GET 200 https://cdn.npmmirror.com/packages/es-define-property/1.0.1/es-define-property-1.0.1.tgz 1139ms (cache miss)
+292 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/compiler-ssr/3.5.25/compiler-ssr-3.5.25.tgz 1178ms (cache miss)
+293 http fetch GET 200 https://cdn.npmmirror.com/packages/vite/6.4.1/vite-6.4.1.tgz 1217ms (cache miss)
+294 http fetch GET 200 https://cdn.npmmirror.com/packages/asynckit/0.4.0/asynckit-0.4.0.tgz 1215ms (cache miss)
+295 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/devtools-api/6.6.4/devtools-api-6.6.4.tgz 1269ms (cache miss)
+296 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/reactivity/3.5.25/reactivity-3.5.25.tgz 1277ms (cache miss)
+297 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/runtime-core/3.5.25/runtime-core-3.5.25.tgz 1322ms (cache miss)
+298 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vueuse/core/9.13.0/core-9.13.0.tgz 1497ms (cache miss)
+299 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/compiler-dom/3.5.25/compiler-dom-3.5.25.tgz 1510ms (cache miss)
+300 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/estree/1.0.8/estree-1.0.8.tgz 1546ms (cache miss)
+301 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/compiler-core/3.5.25/compiler-core-3.5.25.tgz 1556ms (cache miss)
+302 http fetch GET 200 https://cdn.npmmirror.com/packages/vue/3.5.25/vue-3.5.25.tgz 1602ms (cache miss)
+303 http fetch GET 200 https://cdn.npmmirror.com/packages/%40jridgewell/sourcemap-codec/1.5.5/sourcemap-codec-1.5.5.tgz 1585ms (cache miss)
+304 http fetch GET 200 https://cdn.npmmirror.com/packages/%40floating-ui/core/1.7.3/core-1.7.3.tgz 1624ms (cache miss)
+305 http fetch GET 200 https://cdn.npmmirror.com/packages/%40floating-ui/utils/0.2.10/utils-0.2.10.tgz 1657ms (cache miss)
+306 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/runtime-dom/3.5.25/runtime-dom-3.5.25.tgz 1695ms (cache miss)
+307 http fetch GET 200 https://cdn.npmmirror.com/packages/%40sxzz/popperjs-es/2.11.7/popperjs-es-2.11.7.tgz 1694ms (cache miss)
+308 http fetch GET 200 https://cdn.npmmirror.com/packages/%40parcel/watcher/2.5.1/watcher-2.5.1.tgz 1722ms (cache miss)
+309 http fetch GET 200 https://cdn.npmmirror.com/packages/%40floating-ui/dom/1.7.4/dom-1.7.4.tgz 1728ms (cache miss)
+310 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/compiler-sfc/3.5.25/compiler-sfc-3.5.25.tgz 1752ms (cache miss)
+311 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-string-parser/7.27.1/helper-string-parser-7.27.1.tgz 1766ms (cache miss)
+312 http fetch GET 200 https://cdn.npmmirror.com/packages/fdir/6.5.0/fdir-6.5.0.tgz 1778ms (cache miss)
+313 http fetch GET 200 https://cdn.npmmirror.com/packages/picomatch/4.0.3/picomatch-4.0.3.tgz 1792ms (cache miss)
+314 http fetch GET 200 https://cdn.npmmirror.com/packages/%40parcel/watcher-win32-x64/2.5.1/watcher-win32-x64-2.5.1.tgz 1809ms (cache miss)
+315 http fetch GET 200 https://cdn.npmmirror.com/packages/%40ctrl/tinycolor/3.6.1/tinycolor-3.6.1.tgz 1836ms (cache miss)
+316 http fetch GET 200 https://cdn.npmmirror.com/packages/fdir/6.5.0/fdir-6.5.0.tgz 1842ms (cache miss)
+317 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-validator-identifier/7.28.5/helper-validator-identifier-7.28.5.tgz 1851ms (cache miss)
+318 http fetch GET 200 https://cdn.npmmirror.com/packages/picomatch/4.0.3/picomatch-4.0.3.tgz 1896ms (cache miss)
+319 http fetch GET 200 https://cdn.npmmirror.com/packages/sass/1.94.2/sass-1.94.2.tgz 1991ms (cache miss)
+320 http fetch GET 200 https://cdn.npmmirror.com/packages/axios/1.13.2/axios-1.13.2.tgz 2074ms (cache miss)
+321 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/parser/7.28.5/parser-7.28.5.tgz 2338ms (cache miss)
+322 http fetch GET 200 https://cdn.npmmirror.com/packages/%40rollup/rollup-win32-x64-gnu/4.53.3/rollup-win32-x64-gnu-4.53.3.tgz 2384ms (cache miss)
+323 http fetch GET 200 https://cdn.npmmirror.com/packages/%40rollup/rollup-win32-x64-msvc/4.53.3/rollup-win32-x64-msvc-4.53.3.tgz 2564ms (cache miss)
+324 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/types/7.28.5/types-7.28.5.tgz 2578ms (cache miss)
+325 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/lodash-es/4.17.12/lodash-es-4.17.12.tgz 2605ms (cache miss)
+326 http fetch GET 200 https://cdn.npmmirror.com/packages/dayjs/1.11.19/dayjs-1.11.19.tgz 2687ms (cache miss)
+327 http fetch GET 200 https://cdn.npmmirror.com/packages/lodash-es/4.17.21/lodash-es-4.17.21.tgz 3057ms (cache miss)
+328 http fetch GET 200 https://cdn.npmmirror.com/packages/%40element-plus/icons-vue/2.3.2/icons-vue-2.3.2.tgz 3193ms (cache miss)
+329 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/lodash/4.17.21/lodash-4.17.21.tgz 3325ms (cache miss)
+330 http fetch GET 200 https://cdn.npmmirror.com/packages/lodash/4.17.21/lodash-4.17.21.tgz 3593ms (cache miss)
+331 http fetch GET 200 https://cdn.npmmirror.com/packages/%40esbuild/win32-x64/0.25.12/win32-x64-0.25.12.tgz 4025ms (cache miss)
+332 http fetch GET 200 https://cdn.npmmirror.com/packages/element-plus/2.11.8/element-plus-2.11.8.tgz 12362ms (cache miss)
+333 info run @parcel/watcher@2.5.1 install node_modules/@parcel/watcher node scripts/build-from-source.js
+334 info run @parcel/watcher@2.5.1 install { code: 0, signal: null }
+335 info run esbuild@0.25.12 postinstall node_modules/esbuild node install.js
+336 info run vue-demi@0.14.10 postinstall node_modules/vue-demi node -e "try{require('./scripts/postinstall.js')}catch(e){}"
+337 info run vue-demi@0.14.10 postinstall { code: 0, signal: null }
+338 info run esbuild@0.25.12 postinstall { code: 0, signal: null }
+339 silly ADD node_modules/vue-router
+340 silly ADD node_modules/vue-demi
+341 silly ADD node_modules/vue
+342 silly ADD node_modules/vite
+343 silly ADD node_modules/vite/node_modules/picomatch
+344 silly ADD node_modules/vite/node_modules/fdir
+345 silly ADD node_modules/to-regex-range
+346 silly ADD node_modules/tinyglobby
+347 silly ADD node_modules/tinyglobby/node_modules/picomatch
+348 silly ADD node_modules/tinyglobby/node_modules/fdir
+349 silly ADD node_modules/source-map-js
+350 silly ADD node_modules/sass
+351 silly ADD node_modules/rollup
+352 silly ADD node_modules/readdirp
+353 silly ADD node_modules/proxy-from-env
+354 silly ADD node_modules/postcss
+355 silly ADD node_modules/pinia
+356 silly ADD node_modules/picomatch
+357 silly ADD node_modules/picocolors
+358 silly ADD node_modules/normalize-wheel-es
+359 silly ADD node_modules/node-addon-api
+360 silly ADD node_modules/nanoid
+361 silly ADD node_modules/mime-types
+362 silly ADD node_modules/mime-db
+363 silly ADD node_modules/micromatch
+364 silly ADD node_modules/memoize-one
+365 silly ADD node_modules/math-intrinsics
+366 silly ADD node_modules/magic-string
+367 silly ADD node_modules/lodash-unified
+368 silly ADD node_modules/lodash-es
+369 silly ADD node_modules/lodash
+370 silly ADD node_modules/is-number
+371 silly ADD node_modules/is-glob
+372 silly ADD node_modules/is-extglob
+373 silly ADD node_modules/immutable
+374 silly ADD node_modules/hasown
+375 silly ADD node_modules/has-tostringtag
+376 silly ADD node_modules/has-symbols
+377 silly ADD node_modules/gopd
+378 silly ADD node_modules/get-proto
+379 silly ADD node_modules/get-intrinsic
+380 silly ADD node_modules/function-bind
+381 silly ADD
+382 silly ADD node_modules/form-data
+383 silly ADD node_modules/follow-redirects
+384 silly ADD node_modules/fill-range
+385 silly ADD node_modules/estree-walker
+386 silly ADD node_modules/esbuild
+387 silly ADD node_modules/es-set-tostringtag
+388 silly ADD node_modules/es-object-atoms
+389 silly ADD node_modules/es-errors
+390 silly ADD node_modules/es-define-property
+391 silly ADD node_modules/entities
+392 silly ADD node_modules/element-plus
+393 silly ADD node_modules/dunder-proto
+394 silly ADD node_modules/detect-libc
+395 silly ADD node_modules/delayed-stream
+396 silly ADD node_modules/dayjs
+397 silly ADD node_modules/csstype
+398 silly ADD node_modules/combined-stream
+399 silly ADD node_modules/chokidar
+400 silly ADD node_modules/call-bind-apply-helpers
+401 silly ADD node_modules/braces
+402 silly ADD node_modules/axios
+403 silly ADD node_modules/asynckit
+404 silly ADD node_modules/async-validator
+405 silly ADD node_modules/@vueuse/shared
+406 silly ADD node_modules/@vueuse/metadata
+407 silly ADD node_modules/@vueuse/core
+408 silly ADD node_modules/@vue/shared
+409 silly ADD node_modules/@vue/server-renderer
+410 silly ADD node_modules/@vue/runtime-dom
+411 silly ADD node_modules/@vue/runtime-core
+412 silly ADD node_modules/@vue/reactivity
+413 silly ADD node_modules/@vue/devtools-api
+414 silly ADD node_modules/@vue/compiler-ssr
+415 silly ADD node_modules/@vue/compiler-sfc
+416 silly ADD node_modules/@vue/compiler-dom
+417 silly ADD node_modules/@vue/compiler-core
+418 silly ADD node_modules/@vitejs/plugin-vue
+419 silly ADD node_modules/@types/web-bluetooth
+420 silly ADD node_modules/@types/lodash-es
+421 silly ADD node_modules/@types/lodash
+422 silly ADD node_modules/@types/estree
+423 silly ADD node_modules/@rollup/rollup-win32-x64-msvc
+424 silly ADD node_modules/@rollup/rollup-win32-x64-gnu
+425 silly ADD
+426 silly ADD
+427 silly ADD
+428 silly ADD
+429 silly ADD
+430 silly ADD
+431 silly ADD
+432 silly ADD
+433 silly ADD
+434 silly ADD
+435 silly ADD
+436 silly ADD
+437 silly ADD
+438 silly ADD
+439 silly ADD
+440 silly ADD
+441 silly ADD
+442 silly ADD
+443 silly ADD
+444 silly ADD
+445 silly ADD node_modules/@popperjs/core
+446 silly ADD node_modules/@parcel/watcher-win32-x64
+447 silly ADD
+448 silly ADD
+449 silly ADD
+450 silly ADD
+451 silly ADD
+452 silly ADD
+453 silly ADD
+454 silly ADD
+455 silly ADD
+456 silly ADD
+457 silly ADD
+458 silly ADD
+459 silly ADD node_modules/@parcel/watcher
+460 silly ADD node_modules/@jridgewell/sourcemap-codec
+461 silly ADD node_modules/@floating-ui/utils
+462 silly ADD node_modules/@floating-ui/dom
+463 silly ADD node_modules/@floating-ui/core
+464 silly ADD node_modules/@esbuild/win32-x64
+465 silly ADD
+466 silly ADD
+467 silly ADD
+468 silly ADD
+469 silly ADD
+470 silly ADD
+471 silly ADD
+472 silly ADD
+473 silly ADD
+474 silly ADD
+475 silly ADD
+476 silly ADD
+477 silly ADD
+478 silly ADD
+479 silly ADD
+480 silly ADD
+481 silly ADD
+482 silly ADD
+483 silly ADD
+484 silly ADD
+485 silly ADD
+486 silly ADD
+487 silly ADD
+488 silly ADD
+489 silly ADD
+490 silly ADD node_modules/@element-plus/icons-vue
+491 silly ADD node_modules/@ctrl/tinycolor
+492 silly ADD node_modules/@babel/types
+493 silly ADD node_modules/@babel/parser
+494 silly ADD node_modules/@babel/helper-validator-identifier
+495 silly ADD node_modules/@babel/helper-string-parser
+496 verbose cwd C:\Users\34565\Desktop\MIS\MIS_MobileTerminal\web-app
+497 verbose os Windows_NT 10.0.26100
+498 verbose node v20.19.0
+499 verbose npm  v10.8.2
+500 notice
+500 notice New [31mmajor[39m version of npm available! [31m10.8.2[39m -> [34m11.7.0[39m
+500 notice Changelog: [34mhttps://github.com/npm/cli/releases/tag/v11.7.0[39m
+500 notice To update run: [4mnpm install -g npm@11.7.0[24m
+500 notice  { force: true, [Symbol(proc-log.meta)]: true }
+501 verbose exit 0
+502 info ok

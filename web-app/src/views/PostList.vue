@@ -119,9 +119,17 @@ onMounted(() => {
 }
 
 .post-card {
-  margin-bottom: 15px;
-  
-  .post-header {
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1) !important;
+      border-color: #c6e2ff;
+    }
+    
+    .post-header {
     display: flex;
     justify-content: space-between;
     align-items: center;

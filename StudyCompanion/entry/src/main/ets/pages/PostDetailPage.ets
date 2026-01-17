@@ -136,101 +136,174 @@ struct PostDetailPage {
   }
 
 
-  /** 评论卡片 */
   @Builder
   CommentCard(item: CommentItem) {
-    Column() {
-      Text(item.nickname)
+    Row() {
+      // Avatar placeholder
+      Text(item.nickname.substring(0, 1))
         .fontSize(14)
         .fontWeight(FontWeight.Bold)
+        .fontColor(Color.White)
+        .backgroundColor('#007DFF')
+        .width(32)
+        .height(32)
+        .borderRadius(16)
+        .textAlign(TextAlign.Center)
+        .margin({ right: 12 })
 
-      Text(item.content)
-        .fontSize(16)
-        .margin({ top: 6 })
+      Column() {
+        Row() {
+          Text(item.nickname)
+            .fontSize(14)
+            .fontWeight(FontWeight.Bold)
+            .fontColor('#333')
+          
+          Blank()
+          
+          Text(item.createTime)
+            .fontSize(12)
+            .fontColor('#999')
+        }
+        .width('100%')
+        .margin({ bottom: 4 })
 
-      Text(item.createTime)
-        .fontSize(12)
-        .fontColor(Color.Grey)
-        .margin({ top: 4 })
+        Text(item.content)
+          .fontSize(15)
+          .fontColor('#333')
+          .lineHeight(20)
+      }
+      .layoutWeight(1)
+      .alignItems(HorizontalAlign.Start)
     }
     .padding(12)
     .backgroundColor(Color.White)
-    .borderRadius(8)
+    .borderRadius(12)
     .margin({ bottom: 12 })
+    .shadow({ radius: 4, color: 'rgba(0,0,0,0.05)', offsetY: 2 })
   }
 
   build() {
     Column() {
-
-      /** 顶部返回栏 **/
+      // 顶部标题栏
       Row() {
-        Text("< 返回")
-          .fontSize(18)
-          .onClick(() => router.back())
-
-        Blank().layoutWeight(1)
-
+        Text("<")
+          .fontSize(24)
+          .fontWeight(FontWeight.Bold)
+          .fontColor('#333')
+          .padding({ left: 16, right: 16, top: 10, bottom: 10 })
+          .onClick(() => {
+            router.back();
+          })
+        
         Text("帖子详情")
           .fontSize(20)
           .fontWeight(FontWeight.Bold)
-
-        Blank().layoutWeight(1)
+          .fontColor('#333')
+          .layoutWeight(1)
+          .textAlign(TextAlign.Center)
+          .margin({ right: 44 })
       }
-      .height(50)
-      .padding({ left: 10, right: 10 })
-      .backgroundColor("#F5F5F5")
-
-      if (this.loading) {
-        Text("加载中...").fontSize(18).margin({ top: 20 })
-
-      }
-
-      if (this.errorMsg) {
-        Text(this.errorMsg).fontColor(Color.Red).margin({ top: 20 })
-
-      }
-
-      /** 帖子内容 **/
-      Text(this.post.title)
-        .fontSize(24)
-        .fontWeight(FontWeight.Bold)
-        .margin({ top: 20, bottom: 10 })
-
-      Text("作者：" + this.post.nickname).fontSize(14).fontColor(Color.Grey)
-
-      Text(this.post.content)
-        .fontSize(18)
-        .margin({ top: 20, bottom: 20 })
-
-      /** 评论 **/
-      Text("评论").fontSize(20).fontWeight(FontWeight.Bold)
+      .width('100%')
+      .height(56)
+      .backgroundColor(Color.White)
+      .shadow({ radius: 4, color: 'rgba(0,0,0,0.05)', offsetY: 2 })
+      .zIndex(1)
 
       List() {
+        // 帖子内容区域
+        ListItem() {
+          Column() {
+            Text(this.post.title)
+              .fontSize(22)
+              .fontWeight(FontWeight.Bold)
+              .fontColor('#000')
+              .margin({ bottom: 12 })
+              .width('100%')
+
+            Row() {
+              Text(this.post.nickname)
+                .fontSize(14)
+                .fontColor('#666')
+                .fontWeight(FontWeight.Medium)
+              
+              Text(" · " + this.post.createTime)
+                .fontSize(12)
+                .fontColor('#999')
+            }
+            .width('100%')
+            .margin({ bottom: 20 })
+
+            Text(this.post.content)
+              .fontSize(16)
+              .fontColor('#333')
+              .lineHeight(24)
+              .width('100%')
+          }
+          .padding(20)
+          .backgroundColor(Color.White)
+          .margin({ bottom: 10 })
+        }
+
+        // 评论区标题
+        ListItem() {
+          Text(`评论 (${this.post.comments.length})`)
+            .fontSize(18)
+            .fontWeight(FontWeight.Bold)
+            .fontColor('#333')
+            .padding({ left: 16, top: 16, bottom: 12 })
+        }
+
+        // 评论列表
         ForEach(this.post.comments, (item: CommentItem) => {
           ListItem() { this.CommentCard(item) }
+          .padding({ left: 16, right: 16 })
         })
+
+        // 底部留白，防止被输入框遮挡
+        ListItem().height(80)
       }
+      .width('100%')
+      .layoutWeight(1)
+      .backgroundColor('#F5F7FA')
 
-      /** 评论输入 **/
-      TextInput({ placeholder: "写下你的评论..." })
-        .width("100%")
-        .height(60)
-        .border({ width: 1 })
-        .margin({ top: 20 })
-        .onChange((v: string) => this.commentText = v)
+      // 底部评论输入区
+      Column() {
+        if (this.errorMsg) {
+          Text(this.errorMsg)
+            .fontSize(12)
+            .fontColor(Color.Red)
+            .margin({ bottom: 8 })
+            .width('100%')
+        }
 
-      Button("提交评论")
-        .width("60%")
-        .margin({ top: 10 })
-        .backgroundColor("#007DFF")
-        .fontColor(Color.White)
-        .onClick(() => this.submitComment())
+        Row() {
+          TextInput({ placeholder: "写下你的评论...", text: this.commentText })
+            .layoutWeight(1)
+            .height(40)
+            .backgroundColor('#F0F2F5')
+            .borderRadius(20)
+            .padding({ left: 16, right: 16 })
+            .margin({ right: 12 })
+            .onChange((v: string) => this.commentText = v)
 
-      if (this.errorMsg) {
-        Text(this.errorMsg).fontColor(Color.Red).margin({ top: 10 })
+          Button("发送")
+            .height(36)
+            .fontSize(14)
+            .backgroundColor('#007DFF')
+            .fontColor(Color.White)
+            .borderRadius(18)
+            .onClick(() => this.submitComment())
+            .enabled(!this.loading)
+        }
+        .width('100%')
+        .alignItems(VerticalAlign.Center)
       }
-
+      .padding({ left: 16, right: 16, top: 12, bottom: 12 })
+      .backgroundColor(Color.White)
+      .border({ width: { top: 1 }, color: '#EEE' })
     }
-    .padding(20)
+    .width("100%")
+    .height("100%")
+    .backgroundColor('#F5F7FA')
   }
 }

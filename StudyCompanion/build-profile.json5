@@ -12,7 +12,7 @@
             "caseSensitiveCheck": true,
             "useNormalizedOHMUrl": true
           }
-        }
+        },
       }
     ],
     "buildModeSet": [

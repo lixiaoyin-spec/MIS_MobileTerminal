@@ -1,0 +1,39 @@
+# IntelliJ / DevEco Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+.npm-cache/
+
+# HarmonyOS / Ohos
+.hvigor/
+oh_modules/
+build/
+.cxx/
+local.properties
+.preview/
+.ohos/
+
+# Java / Spring Boot
+target/
+*.class
+.mvn/wrapper/maven-wrapper.jar
+*.log
+
+# System
+.DS_Store
+thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/
+
+# Web App specific
+web-app/.npm-cache/
+web-app/dist/
+web-app/coverage/

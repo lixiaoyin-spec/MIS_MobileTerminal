@@ -49,27 +49,53 @@ struct ForumPage {
   @Builder
   PostCard(item: ForumPost) {
     Column() {
-      Text(item.title)
-        .fontSize(20)
-        .fontWeight(FontWeight.Bold)
+      Row() {
+        // Avatar placeholder (Circle with first letter)
+        Text(item.nickname.substring(0, 1))
+          .fontSize(16)
+          .fontWeight(FontWeight.Bold)
+          .fontColor(Color.White)
+          .backgroundColor('#007DFF')
+          .width(32)
+          .height(32)
+          .borderRadius(16)
+          .textAlign(TextAlign.Center)
+          .margin({ right: 12 })
+        
+        Column() {
+          Text(item.nickname)
+            .fontSize(14)
+            .fontWeight(FontWeight.Medium)
+            .fontColor('#333')
+          Text(item.createTime)
+            .fontSize(12)
+            .fontColor('#999')
+            .margin({ top: 2 })
+        }.alignItems(HorizontalAlign.Start)
+      }
+      .width('100%')
+      .margin({ bottom: 12 })
 
-      Text(item.nickname)
-        .fontSize(14)
-        .fontColor(Color.Grey)
+      Text(item.title)
+        .fontSize(18)
+        .fontWeight(FontWeight.Bold)
+        .fontColor('#000')
+        .width('100%')
+        .margin({ bottom: 8 })
 
       Text(item.content)
-        .maxLines(2)
-        .margin({ top: 6 })
-        .fontSize(16)
-
-      Text(item.createTime)
-        .fontSize(12)
-        .fontColor(Color.Grey)
+        .fontSize(15)
+        .fontColor('#666')
+        .maxLines(3)
+        .textOverflow({ overflow: TextOverflow.Ellipsis })
+        .width('100%')
+        .lineHeight(22)
     }
     .padding(16)
     .backgroundColor(Color.White)
-    .borderRadius(12)
-    .margin({ bottom: 12 })
+    .borderRadius(16)
+    .margin({ bottom: 12, left: 16, right: 16 })
+    .shadow({ radius: 8, color: 'rgba(0,0,0,0.05)', offsetY: 4 })
     .onClick(() => {
       router.pushUrl({
         url: "pages/PostDetailPage",
@@ -80,57 +106,65 @@ struct ForumPage {
 
   build() {
     Column() {
-
-      // 顶部标题
-      Text("论坛")
-        .fontSize(28)
-        .fontWeight(FontWeight.Bold)
-        .margin({ top: 20, bottom: 20 })
+      // 顶部标题栏
+      Row() {
+        Text("<")
+          .fontSize(24)
+          .fontWeight(FontWeight.Bold)
+          .fontColor('#333')
+          .padding({ left: 16, right: 16, top: 10, bottom: 10 })
+          .onClick(() => {
+            router.back();
+          })
+        
+        Text("学习论坛")
+          .fontSize(20)
+          .fontWeight(FontWeight.Bold)
+          .fontColor('#333')
+          .layoutWeight(1)
+        
+        // 发帖按钮
+        Text("+ 发帖")
+          .fontSize(16)
+          .fontColor('#007DFF')
+          .fontWeight(FontWeight.Medium)
+          .padding({ left: 16, right: 16, top: 10, bottom: 10 })
+          .onClick(() => router.pushUrl({ url: "pages/CreatePostPage" }))
+      }
+      .width('100%')
+      .height(56)
+      .backgroundColor(Color.White)
+      .alignItems(VerticalAlign.Center)
+      .shadow({ radius: 4, color: 'rgba(0,0,0,0.05)', offsetY: 2 })
+      .zIndex(1)
 
       if (this.loading) {
-        Text("加载中...").fontSize(18)
+        Column() {
+          LoadingProgress().width(40).height(40).color('#007DFF')
+          Text("加载中...").fontSize(14).fontColor('#999').margin({ top: 10 })
+        }.width('100%').height('100%').justifyContent(FlexAlign.Center)
       } else if (this.errorMsg) {
-        Text(this.errorMsg).fontColor(Color.Red)
+        Column() {
+          Text(this.errorMsg).fontSize(16).fontColor('#999')
+          Button("重试")
+            .margin({ top: 16 })
+            .onClick(() => this.loadPosts())
+        }.width('100%').height('100%').justifyContent(FlexAlign.Center)
       } else {
         List() {
           ForEach(this.posts, (item: ForumPost, index: number) => {
             ListItem() { this.PostCard(item) }
           })
+          ListItem().height(80) // 底部留白
         }
+        .width('100%')
+        .layoutWeight(1)
+        .padding({ top: 16 })
+        .backgroundColor('#F5F7FA') // 浅灰背景
       }
-
-      Button("发帖")
-        .margin({ top: 20 })
-        .onClick(() => router.pushUrl({ url: "pages/CreatePostPage" }))
-
-      // ======== 底部导航栏 ========
-      Blank().layoutWeight(1)  // 占位，把底部栏压到底部
-
-      Row() {
-        // Home 按钮
-        Column() {
-          Text("首页").fontSize(14)
-            // 点击返回 Home
-            .onClick(() => router.replaceUrl({ url: "pages/Home" }))
-        }.width("33%").alignItems(HorizontalAlign.Center)
-
-        // Forum 当前页面
-        Column() {
-          Text("论坛").fontSize(14).fontColor(Color.Blue)
-        }.width("33%").alignItems(HorizontalAlign.Center)
-
-        // Profile
-        Column() {
-          Text("我的").fontSize(14)
-            .onClick(() => router.replaceUrl({ url: "pages/ProfilePage" }))
-        }.width("33%").alignItems(HorizontalAlign.Center)
-      }
-      .height(60)
-      .backgroundColor(Color.White)
-      .border({ width: 1, color: '#ddd' })
-      .justifyContent(FlexAlign.SpaceAround)
-      .padding({ bottom: 10, top: 10 })
     }
     .width("100%")
+    .height("100%")
+    .backgroundColor('#F5F7FA')
   }
 }

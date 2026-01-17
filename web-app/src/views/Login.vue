@@ -87,18 +87,25 @@ const handleLogin = async () => {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #2d3a4b;
-  background-image: linear-gradient(135deg, #2d3a4b 0%, #1c232d 100%);
+  /* 静态深蓝渐变，专业且沉稳 */
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
 }
 
 .login-card {
   width: 400px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   
   .card-header {
     text-align: center;
     h2 {
       margin: 0;
-      color: #409eff;
+      color: #333;
+      font-weight: 600;
+      letter-spacing: 2px;
     }
   }
 }

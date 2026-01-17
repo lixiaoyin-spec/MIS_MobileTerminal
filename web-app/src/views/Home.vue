@@ -7,25 +7,43 @@ import { ElMessage } from 'element-plus'
 
 const userStore = useUserStore()
 const dialogVisible = ref(false)
-const newTags = ref('')
+const newTags = ref([])
 const loading = ref(false)
 const partners = ref([])
 const partnersLoading = ref(false)
 
+// Tag ID mapping
+const allTags = [
+  { id: '1', name: '1' },
+  { id: '2', name: '2' },
+  { id: '3', name: '3' },
+  { id: '4', name: '4' },
+  { id: '5', name: '5' }
+]
+
+const getTagName = (id) => {
+  const tag = allTags.find(t => t.id === String(id))
+  return tag ? tag.name : id
+}
+
 const openEditDialog = () => {
-  newTags.value = userStore.userInfo.interestTags || ''
+  const currentTags = userStore.userInfo.interestTags || ''
+  newTags.value = currentTags ? currentTags.split(',') : []
   dialogVisible.value = true
 }
 
 const handleUpdateTags = async () => {
   loading.value = true
+  // Sort tags to ensure consistent order (1,2,3)
+  const tagString = newTags.value.sort().join(',')
+  
   try {
     await updateTags({
       token: userStore.token,
-      interestTags: newTags.value
+      interestTags: tagString
     })
     
-    userStore.updateUserInfo({ interestTags: newTags.value })
+    userStore.updateUserInfo({ interestTags: tagString })
     ElMessage.success('标签修改成功')
     dialogVisible.value = false
     // Refresh recommendations after tags update
@@ -87,11 +105,20 @@ onMounted(() => {
     </el-card>
 
     <!-- Tag Edit Dialog -->
-    <el-dialog v-model="dialogVisible" title="修改兴趣标签" width="400px">
+    <el-dialog v-model="dialogVisible" title="修改兴趣标签" width="500px">
       <el-form label-position="top">
-        <el-form-item label="兴趣标签 (用逗号分隔)">
-          <el-input v-model="newTags" placeholder="例如：1,3,5" />
-          <div class="tips">提示：请输入数字标签ID，多个用逗号隔开</div>
+        <el-form-item label="请选择感兴趣的领域 (多选)">
+          <el-checkbox-group v-model="newTags">
+            <el-checkbox 
+              v-for="tag in allTags" 
+              :key="tag.id" 
+              :label="tag.id" 
+              :value="tag.id"
+              border
+            >
+              {{ tag.name }}
+            </el-checkbox>
+          </el-checkbox-group>
         </el-form-item>
       </el-form>
       <template #footer>
@@ -157,7 +184,7 @@ onMounted(() => {
                     size="small" 
                     class="tag-item"
                   >
-                    标签{{ tag }}
+                    {{ getTagName(tag) }}
                   </el-tag>
                 </div>
                 <div class="match-info">

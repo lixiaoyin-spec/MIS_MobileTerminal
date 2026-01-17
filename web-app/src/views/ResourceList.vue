@@ -114,6 +114,15 @@ const handleExceed = () => {
   padding: 0;
 }
 
+.upload-card, .list-card {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08) !important;
+  }
+}
+
 .upload-container {
   padding: 20px;
   text-align: center;

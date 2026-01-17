@@ -37,16 +37,33 @@ struct HomePage {
     router.replaceUrl({ url: "pages/LoginPage" });
   }
 
-  // ----------- Builder 生成导航按钮 ----------
+  // ----------- Builder 生成功能卡片 ----------
   @Builder
-  NavButton(label: string, page: string) {
-    Button() {
+  NavCard(label: string, iconStr: string, page: string, bgColor: string) {
+    Column() {
+      Text(iconStr)
+        .fontSize(24)
+        .fontWeight(FontWeight.Bold)
+        .fontColor(Color.White)
+        .backgroundColor(bgColor)
+        .width(50)
+        .height(50)
+        .borderRadius(25)
+        .textAlign(TextAlign.Center)
+        .margin({ bottom: 8 })
+
       Text(label)
+        .fontSize(14)
+        .fontWeight(FontWeight.Medium)
+        .fontColor('#333')
     }
-    .width("20%") // 调整宽度以容纳5个按钮
-    .height(50)
-    .fontSize(16) // 调整字体大小
-    .backgroundColor(Color.Transparent)
+    .width('44%') // 两列布局
+    .height(110)
+    .backgroundColor(Color.White)
+    .borderRadius(16)
+    .justifyContent(FlexAlign.Center)
+    .margin(8)
+    .shadow({ radius: 8, color: 'rgba(0,0,0,0.05)', offsetY: 4 })
     .onClick(() => {
       router.pushUrl({ url: `pages/${page}` });
     })
@@ -54,58 +71,124 @@ struct HomePage {
 
   build() {
     Column() {
+      // 顶部背景区域
+      Stack({ alignContent: Alignment.TopStart }) {
+        Column()
+          .width('100%')
+          .height(220)
+          .linearGradient({
+            angle: 180,
+            colors: [[0x1e3c72, 0.0], [0x2a5298, 1.0]]
+          })
+          .borderRadius({ bottomLeft: 30, bottomRight: 30 })
 
-      // 顶部标题
-      Text("学伴领航首页")
-        .fontSize(28)
-        .fontWeight(FontWeight.Bold)
-        .margin({ top: 30, bottom: 20 })
-
-      // ---------- 用户信息卡片（官方正确语法） ----------
-      Column() {
-        Text(`用户：${this.nickname} (${this.username})`)
-          .fontSize(20)
-          .margin({ bottom: 6 })
-
-        Text(`专业：${this.major}`).fontSize(16)
-        Text(`年级：${this.grade}`).fontSize(16)
-        Text(`兴趣标签：${this.interestTags}`).fontSize(16).margin({ bottom: 8 })
-        Text(`角色：${this.role}`).fontSize(16).fontColor(Color.Grey)
-
-        Button() {
-          Text("退出登录")
+        Column() {
+          Text("学伴领航")
+            .fontSize(24)
+            .fontWeight(FontWeight.Bold)
+            .fontColor(Color.White)
+            .margin({ top: 40, left: 20 })
+          
+          Text(`欢迎回来，${this.nickname || this.username}`)
+            .fontSize(16)
+            .fontColor('rgba(255,255,255,0.8)')
+            .margin({ top: 8, left: 20 })
         }
-        .width("60%")
-        .margin({ top: 20 })
-        .backgroundColor(Color.Red)
-        .fontColor(Color.White)
-        .onClick(() => this.onLogout())
+      }
+      .height(220)
+      .width('100%')
+
+      // 用户信息卡片 (浮动在背景之上)
+      Column() {
+        Row() {
+          Column() {
+            Text(this.nickname || "用户")
+              .fontSize(20)
+              .fontWeight(FontWeight.Bold)
+            Text(this.role === 'teacher' ? '教师' : '学生')
+              .fontSize(12)
+              .fontColor(Color.White)
+              .backgroundColor('#FF9800')
+              .padding({ left: 6, right: 6, top: 2, bottom: 2 })
+              .borderRadius(4)
+              .margin({ top: 4 })
+          }
+          .alignItems(HorizontalAlign.Start)
+
+          Blank()
+
+          Button("退出")
+            .height(28)
+            .fontSize(12)
+            .backgroundColor('rgba(255, 0, 0, 0.1)')
+            .fontColor(Color.Red)
+            .onClick(() => this.onLogout())
+        }
+        .width('100%')
+        .padding({ bottom: 12 })
+        .border({ width: { bottom: 1 }, color: '#eee' })
+
+        Row() {
+          Column() {
+            Text(this.major || "暂无专业")
+              .fontSize(14)
+              .fontColor('#666')
+            Text("专业")
+              .fontSize(12)
+              .fontColor('#999')
+              .margin({ top: 4 })
+          }.layoutWeight(1)
+
+          Column() {
+            Text(String(this.grade || 0))
+              .fontSize(14)
+              .fontColor('#666')
+            Text("年级")
+              .fontSize(12)
+              .fontColor('#999')
+              .margin({ top: 4 })
+          }.layoutWeight(1)
+
+          Column() {
+            Text(this.interestTags || "无")
+              .fontSize(14)
+              .fontColor('#666')
+              .maxLines(1)
+              .textOverflow({ overflow: TextOverflow.Ellipsis })
+            Text("标签")
+              .fontSize(12)
+              .fontColor('#999')
+              .margin({ top: 4 })
+          }.layoutWeight(1)
+        }
+        .padding({ top: 12 })
       }
       .width("90%")
-      .padding(15)
-      .margin({ top: 20 })
-      .borderRadius(12)
+      .padding(20)
+      .margin({ top: -80 }) // 负边距实现重叠效果
       .backgroundColor(Color.White)
+      .borderRadius(16)
+      .shadow({ radius: 16, color: 'rgba(0,0,0,0.1)', offsetY: 4 })
 
-      Blank().height(40)
+      // 功能导航区域
+      Text("功能服务")
+        .fontSize(18)
+        .fontWeight(FontWeight.Bold)
+        .width('90%')
+        .margin({ top: 20, bottom: 10 })
 
-      Blank().layoutWeight(1)
-
-      // ---------- 底部导航（官方示例写法） ----------
-      Row() {
-        this.NavButton("论坛", "ForumPage")
-        this.NavButton("学伴推荐", "RecommendPage")
-        this.NavButton("AI助手", "AiChatPage") // 新增AI助手入口
-        this.NavButton("打卡", "ClockInPage")
-        this.NavButton("资源上传", "ResourceUploadPage")
+      Flex({ wrap: FlexWrap.Wrap, justifyContent: FlexAlign.Start }) {
+        this.NavCard("论坛交流", "论", "ForumPage", "#4CAF50")
+        this.NavCard("学伴推荐", "伴", "RecommendPage", "#2196F3")
+        this.NavCard("AI助手", "AI", "AiChatPage", "#9C27B0")
+        this.NavCard("每日打卡", "卡", "ClockInPage", "#FF9800")
+        this.NavCard("资源上传", "传", "ResourceUploadPage", "#607D8B")
       }
-      .width("100%")
-      .height(60)
-      .backgroundColor("#F2F2F2")
-      .justifyContent(FlexAlign.SpaceAround)
+      .width('100%')
+      .padding({ left: 10, right: 10 })
+
     }
-    .width("100%")
-    .height("100%")
-    .backgroundColor("#FAFAFA")
+    .height('100%')
+    .backgroundColor('#F5F7FA')
   }
 }

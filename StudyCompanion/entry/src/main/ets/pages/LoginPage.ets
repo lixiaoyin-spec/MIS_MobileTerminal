@@ -54,7 +54,6 @@ struct LoginPage {
     try {
       // 调用登录方法
       const res = await this.store.login(this.username, this.password);
-      //promptAction.showToast({ message: res.msg || "登录成功" });
       AppStorage.setOrCreate("token", res.data.token);
       router.replaceUrl({ url: "pages/Home" });
     } catch (err) { // 无类型注解，符合 arkts-no-types-in-catch
@@ -83,48 +82,84 @@ struct LoginPage {
   }
 
   build() {
-    Column({ space: 20 }) {
-      Text("学伴领航")
-        .fontSize(32)
-        .fontWeight(FontWeight.Bold)
-        .margin({ top: 60 })
-
-      TextInput({ placeholder: "用户名", text: this.username })
-        .width("80%")
-        .onChange((v: string) => {
-          this.username = v;
-          this.message = ""; // 输入时清空错误提示
+    Stack() {
+      // 1. 背景层：静态深蓝渐变
+      Column()
+        .width('100%')
+        .height('100%')
+        .linearGradient({
+          angle: 135,
+          colors: [[0x1e3c72, 0.0], [0x2a5298, 1.0]]
         })
 
-      TextInput({ placeholder: "密码", text: this.password })
-        .width("80%")
-        .type(InputType.Password)
-        .onChange((v: string) => {
-          this.password = v;
-          this.message = ""; // 输入时清空错误提示
-        })
+      // 2. 内容层：玻璃拟态卡片
+      Column({ space: 20 }) {
+        Text("学伴领航")
+          .fontSize(32)
+          .fontWeight(FontWeight.Bold)
+          .fontColor('#333')
+          .margin({ top: 10, bottom: 20 })
+          .letterSpacing(2)
 
-      // 登录按钮（加载状态禁用）
-      Button(this.loading ? "登录中..." : "登录")
-        .width("60%")
-        .enabled(!this.loading)
-        .backgroundColor(this.loading ? Color.Grey : Color.Blue)
-        .onClick(() => { this.onLoginClick(); })
+        TextInput({ placeholder: "用户名", text: this.username })
+          .width("100%")
+          .height(48)
+          .backgroundColor('#F5F7FA')
+          .borderRadius(8)
+          .padding({ left: 16 })
+          .onChange((v: string) => {
+            this.username = v;
+            this.message = ""; // 输入时清空错误提示
+          })
 
-      Button("去注册")
-        .width("60%")
-        .onClick(() => { router.pushUrl({ url: "pages/Register" }); })
+        TextInput({ placeholder: "密码", text: this.password })
+          .width("100%")
+          .height(48)
+          .backgroundColor('#F5F7FA')
+          .borderRadius(8)
+          .type(InputType.Password)
+          .padding({ left: 16 })
+          .onChange((v: string) => {
+            this.password = v;
+            this.message = ""; // 输入时清空错误提示
+          })
 
-      // 错误提示
-      if (this.message) {
-        Text(this.message)
+        // 登录按钮
+        Button(this.loading ? "登录中..." : "登录")
+          .width("100%")
+          .height(48)
+          .enabled(!this.loading)
+          .backgroundColor(this.loading ? '#A0CFFF' : '#007DFF')
+          .borderRadius(8)
+          .fontSize(18)
+          .fontWeight(FontWeight.Medium)
+          .shadow({ radius: 8, color: "rgba(0, 125, 255, 0.3)", offsetY: 4 })
+          .onClick(() => { this.onLoginClick(); })
+
+        // 去注册按钮
+        Button("没有账号？去注册")
+          .width("100%")
+          .backgroundColor(Color.Transparent)
+          .fontColor('#666')
           .fontSize(14)
-          .fontColor(Color.Red)
-          .margin({ top: 10 })
+          .onClick(() => { router.pushUrl({ url: "pages/Register" }); })
+
+        // 错误提示
+        if (this.message) {
+          Text(this.message)
+            .fontSize(14)
+            .fontColor('#FF4D4F')
+            .margin({ top: 5 })
+        }
       }
+      .width("85%")
+      .padding({ top: 40, bottom: 40, left: 30, right: 30 })
+      .backgroundColor('rgba(255, 255, 255, 0.9)') // 半透明白
+      .borderRadius(16)
+      .shadow({ radius: 30, color: 'rgba(31, 38, 135, 0.25)', offsetY: 10 })
+      // .backdropBlur(10) // 注意：部分设备/版本可能不支持，视情况而定，这里主要靠背景色透明度模拟
     }
-    .width("100%")
-    .padding({ left: 20, right: 20 })
-    .justifyContent(FlexAlign.Center);
+    .width('100%')
+    .height('100%')
   }
 }

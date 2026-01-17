@@ -1,19 +1,21 @@
-import http from '@ohos.net.http';
 import fs from '@ohos.file.fs';
+import http from '@ohos.net.http';
 
 export class HttpClient {
-  private static BASE_URL = "http://10.4.113.10:8081";
+  private static BASE_URL = 'http://192.168.1.5:8081';
 
   /** POST（自动加入 Bearer token） */
-  static async postJson<T>(path: string, data: object, token?: string): Promise<T> {
+  static async postJson<T>(path: string, data: object, token?: string):
+      Promise<T> {
     const httpRequest = http.createHttp();
-    const headers: Record<string, string> = { "Content-Type": "application/json" };
-    if (token) headers["Authorization"] = `Bearer ${token}`;
+    const headers:
+        Record<string, string> = {'Content-Type': 'application/json'};
+    if (token) headers['Authorization'] = `Bearer ${token}`;
 
     try {
       const fullUrl = this.getFullUrl(path);
-      console.info("POST URL:", fullUrl);
-      console.info("POST body:", JSON.stringify(data));
+      console.info('POST URL:', fullUrl);
+      console.info('POST data:', JSON.stringify(data));
 
       const response = await httpRequest.request(fullUrl, {
         method: http.RequestMethod.POST,
@@ -35,7 +37,7 @@ export class HttpClient {
     try {
       const fullUrl = this.getFullUrl(path);
       const headers: Record<string, string> = {};
-      if (token) headers["Authorization"] = `Bearer ${token}`;
+      if (token) headers['Authorization'] = `Bearer ${token}`;
 
       const response = await httpRequest.request(fullUrl, {
         method: http.RequestMethod.GET,
@@ -56,14 +58,17 @@ export class HttpClient {
    * token: 可选，自动放到 Authorization: Bearer ...
    */
   static async postForm<T>(
-    path: string,
-    formData: { [key: string]: string | { uri: string } },
-    token?: string
-  ): Promise<T> {
+      path: string, formData: {
+        [key: string]:
+            string|{
+              uri: string
+            }
+      },
+      token?: string): Promise<T> {
     const httpRequest = http.createHttp();
     try {
       const fullUrl = this.getFullUrl(path);
-      console.info("POST FORM URL:", fullUrl);
+      console.info('POST FORM URL:', fullUrl);
 
       const multiFormDataList: http.MultiFormData[] = [];
 
@@ -72,30 +77,28 @@ export class HttpClient {
         if (!Object.prototype.hasOwnProperty.call(formData, key)) continue;
         const val = formData[key];
 
-        if (typeof val === "object" && val !== null && (val as { uri?: string }).uri) {
+        if (typeof val === 'object' && val !== null &&
+            (val as {uri?: string}).uri) {
           // 文件字段：读取文件为 ArrayBuffer/Uint8Array
-          const uri = (val as { uri: string }).uri;
+          const uri = (val as {uri: string}).uri;
           console.info(`Reading file for form field "${key}" from uri:`, uri);
           const bytes = await this.readFileBytes(uri);
           multiFormDataList.push({
             name: key,
-            contentType: "application/octet-stream",
+            contentType: 'application/octet-stream',
             data: bytes.buffer
           });
         } else {
           // 普通字段 -> 转为 UTF-8 bytes
-          const s = String(val ?? "");
+          const s = String(val ?? '');
           const bytes = this.encodeUtf8(s);
-          multiFormDataList.push({
-            name: key,
-            contentType: "text/plain",
-            data: bytes.buffer
-          });
+          multiFormDataList.push(
+              {name: key, contentType: 'text/plain', data: bytes.buffer});
         }
       }
 
       const headers: Record<string, string> = {};
-      if (token) headers["Authorization"] = `Bearer ${token}`;
+      if (token) headers['Authorization'] = `Bearer ${token}`;
 
       const response = await httpRequest.request(fullUrl, {
         method: http.RequestMethod.POST,
@@ -113,9 +116,9 @@ export class HttpClient {
 
   /** 统一解析 http.HttpResponse -> JSON */
   private static parseResponse<T>(response: http.HttpResponse): T {
-    console.info("HTTP Code:", response.responseCode);
-    const raw = response.result ? response.result.toString() : "";
-    console.info("Raw Result:", raw);
+    console.info('HTTP Code:', response.responseCode);
+    const raw = response.result ? response.result.toString() : '';
+    console.info('Raw Result:', raw);
 
     if (response.responseCode !== 200) {
       // 抛出更容易定位的错误
@@ -125,7 +128,8 @@ export class HttpClient {
     try {
       return JSON.parse(raw) as T;
     } catch (e) {
-      throw new Error(`JSON parse error: ${(e as Error).message} - raw: ${raw}`);
+      throw new Error(
+          `JSON parse error: ${(e as Error).message} - raw: ${raw}`);
     }
   }
 
@@ -150,7 +154,8 @@ export class HttpClient {
         i++;
         if (i >= str.length) break;
         const second = str.charCodeAt(i);
-        const surrogate = 0x10000 + (((codePoint & 0x3ff) << 10) | (second & 0x3ff));
+        const surrogate =
+            0x10000 + (((codePoint & 0x3ff) << 10) | (second & 0x3ff));
         encoder.push(0xf0 | (surrogate >> 18));
         encoder.push(0x80 | ((surrogate >> 12) & 0x3f));
         encoder.push(0x80 | ((surrogate >> 6) & 0x3f));
@@ -165,14 +170,16 @@ export class HttpClient {
    *
    * 说明：
    * - 在不同 OHOS SDK 版本中，@ohos.file.fs 的 API 可能略有差异。
-   * - 我们先尝试使用常见的 readFile 接口（如果存在），否则尝试 open/stat/read/close 的组合。
+   * - 我们先尝试使用常见的 readFile 接口（如果存在），否则尝试
+   * open/stat/read/close 的组合。
    */
   private static async readFileBytes(uri: string): Promise<Uint8Array> {
     try {
       // 优先尝试存在的简单接口 readFile（返回 object 包含 bytes/array）
       // 注意：不同 SDK 的返回结构不同，这里做保护性判断
       if (typeof (fs as any).readFile === 'function') {
-        // @ts-ignore - 部分 SDK 上 readFile 返回 { bytes: Uint8Array } 或 Buffer-like
+        // @ts-ignore - 部分 SDK 上 readFile 返回 { bytes: Uint8Array } 或
+        // Buffer-like
         const result = await (fs as any).readFile(uri);
         if (result && result.bytes && result.bytes instanceof Uint8Array) {
           return result.bytes as Uint8Array;
@@ -180,14 +187,16 @@ export class HttpClient {
         if (result && result instanceof Uint8Array) {
           return result as Uint8Array;
         }
-        // 如果返回的是 string，则转为 Uint8Array（假设为 base64 或文本 —— 这里仅做兜底）
+        // 如果返回的是 string，则转为 Uint8Array（假设为 base64 或文本 ——
+        // 这里仅做兜底）
         if (typeof result === 'string') {
           return this.encodeUtf8(result);
         }
       }
 
       // 否则尝试 open/stat/read/close 式（较底层）
-      // 不同 SDK 名称可能不同，请根据 IDE 的提示调整为 open/read/stat 的正确方法名
+      // 不同 SDK 名称可能不同，请根据 IDE 的提示调整为 open/read/stat
+      // 的正确方法名
       const openRes = await (fs as any).open(uri);
       const stat = await (fs as any).stat(uri);
       const size = stat ? stat.size ?? stat.length ?? 0 : 0;
@@ -226,8 +235,8 @@ export class HttpClient {
 
   /** 统一 URL 处理 */
   private static getFullUrl(path: string): string {
-    const base = this.BASE_URL.replace(/\/$/, "");
-    const p = path.startsWith("/") ? path : `/${path}`;
+    const base = this.BASE_URL.replace(/\/$/, '');
+    const p = path.startsWith('/') ? path : `/${path}`;
     return `${base}${p}`;
   }
 }
